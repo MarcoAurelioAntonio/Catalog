@@ -1,10 +1,10 @@
 <a name="readme-top"></a>
-
+<img src="murple_logo.png" />
 <div align="center">
 
   <br/>
 
-  <h3><b>School library</b></h3>
+  <h3><b>Catalog</b></h3>
 
 </div>
 
@@ -32,17 +32,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 School Library <a name="about-project"></a>
+# 📖 Catalog <a name="about-project"></a>
 
-**[ School Library ]** School library is an app that used to record what books are in the library and who borrows them.
-
-The app will allow you to:
-
-- [ ] Add new students or teachers.
-- [ ] Add new books.
-- [ ] Save records of who borrowed a given book and when.
-
-`And all of this is built in a beautiful and well-organized way!`
+**[ Catalog ]** In this project, we are going to create a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -59,11 +51,6 @@ The app will allow you to:
 
 ### Key Features <a name="key-features"></a>
 
-- **Add new students or teachers**
-- **Add new books**
-- **Save records of who borrowed a given book and when**
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -78,8 +65,8 @@ Have `Ruby`, and `Git` installed on your local machine.
 
 Clone this repository to your desired folder:
 
-- git clone https://github.com/Miliyonayalew/school-libray.git
-- cd school-library
+- git clone https://github.com/MarcoAurelioAntonio/Catalog
+- cd Catalog
 - Run `bundle install` to install the required gems
 
 
@@ -94,11 +81,16 @@ ruby `main.rb`
 
 ## Author <a name="authors"></a>
 
-👤 **Miliyon Ayalew**
+👤 **Camilo Vela**
 
-- GitHub: [@Miliyonayalew](https://github.com/Miliyonayalew/)
-- Twitter: [@Miliyonayalew](https://twitter.com/MilaAyalew)
-- LinkedIn: [Miliyonayalew](https://www.linkedin.com/in/miliyon-ayalew-210808131/)
+- GitHub: [@camilovelag](https://github.com/camilovelag)
+- Twitter: [@camilovelag](https://twitter.com/camilovelag)
+- LinkedIn: [camilovelag](https://linkedin.com/in/camilovelag)
+
+👤 **Solomon Akpuru**
+- GitHub: [@githubhandle](https://github.com/solobarine)
+- Twitter: [@twitterhandle](https://twitter.com/solomonakpuru)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/solomon-akpuru)
 
 👤 **Gustavo Porcilio**
 
@@ -122,7 +114,7 @@ ruby `main.rb`
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Miliyonayalew/school-library/issues).
+Feel free to check the [issues page](https://github.com/MarcoAurelioAntonio/Catalog/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
