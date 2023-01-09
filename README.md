@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-<img src="murple_logo.png" width="50%" />
+<img src="murple_logo.png" width="30%" />
 <div align="center">
 
   <br/>
