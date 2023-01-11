@@ -3,6 +3,9 @@ class App
     @books = []
     @music_albums = []
     @games = []
+    @genres = []
+    @labels = []
+    @authors = []
     @menu_options = {
       '1' => method(:list_all_books),
       '2' => method(:list_all_music_albums),
