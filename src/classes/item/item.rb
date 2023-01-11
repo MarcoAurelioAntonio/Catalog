@@ -1,6 +1,8 @@
 require 'date'
 
 class Item
+  attr_writer :genre
+
   def initialize(genre, author, label, date)
     @id = Random.rand(1000)
     @genre = genre
