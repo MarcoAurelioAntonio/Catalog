@@ -5,10 +5,6 @@ class Game
   end
 
   def can_be_archived
-    if can_be_archived && @last_played_at < (365 * 2)
-      return true
-    else
-      return false
-    end
+    return true if can_be_archived && @last_played_at < (365 * 2)
   end
 end
