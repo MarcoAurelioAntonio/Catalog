@@ -8,6 +8,7 @@ class Author
 
   def add_item
     return if @items.include?(self)
+
     @items.push(self)
   end
 end
