@@ -68,7 +68,7 @@ class App
   end
 
   def add_music_album
-    ManageMusicAlbum.add_music_album(@music_albums)
+    ManageMusicAlbum.add_music_album(@music_albums, @genres)
   end
 
   def add_game
