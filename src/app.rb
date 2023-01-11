@@ -44,7 +44,9 @@ class App
   end
 
   def list_all_music_albums
-    puts 'list all music albums'
+    @music_albums.each_with_index do |music_album, index|
+      puts "#{index + 1} - #{music_album.genre.genre} - #{music_album.author} - #{music_album.label} - #{music_album.publish_date} - #{music_album.on_spotify}"
+    end
   end
 
   def list_all_games
