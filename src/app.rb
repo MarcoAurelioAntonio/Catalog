@@ -1,6 +1,9 @@
 class App
-  def run
-    menu_options = {
+  def initialize
+    @books = []
+    @music_albums = []
+    @games = []
+    @menu_options = {
       '1' => method(:list_all_books),
       '2' => method(:list_all_music_albums),
       '3' => method(:list_all_games),
@@ -11,11 +14,24 @@ class App
       '8' => method(:add_music_album),
       '9' => method(:add_game)
     }
+  end
 
-    menu_options.each_with_index do |option, index|
+  def run
+    @menu_options.each_with_index do |option, index|
       puts "#{index + 1} - #{option[1].name.to_s.split('_').join(' ').capitalize}"
     end
     puts '0 - Exit'
+
+    option = gets.chomp.to_s
+    if @menu_options.key?(option)
+      @menu_options[option].call
+      run
+    elsif option == '0'
+      puts 'Thank you for using this app!'
+    else
+      puts 'That is not a valid option'
+      run
+    end
   end
 
   def list_all_books
