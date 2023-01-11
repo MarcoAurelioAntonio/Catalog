@@ -16,6 +16,15 @@ class ManageMusicAlbum
     on_spotify = gets.chomp.to_s
     on_spotify = on_spotify == 'y'
     music_album = MusicAlbum.new(genre, author, label, date, on_spotify)
+    validate_genre(genre, genres, music_album)
+    music_album.move_to_archive
+    music_albums << music_album
+    puts 'Music album added'
+    puts music_albums.length
+    puts genres.length
+  end
+
+  def self.validate_genre(genre, genres, music_album)
     if genres.select { |item| item.genre == genre }.empty?
       new_genre = Genre.new(genre)
       new_genre.add_item(music_album)
@@ -23,10 +32,5 @@ class ManageMusicAlbum
     else
       genres.select { |item| item.genre == genre }[0].add_item(music_album)
     end
-    music_album.move_to_archive
-    music_albums << music_album
-    puts 'Music album added'
-    puts music_album.inspect
-    puts genres.inspect
   end
 end

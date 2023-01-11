@@ -1,5 +1,6 @@
 class Genre
   attr_accessor :items
+  attr_reader :genre
 
   def initialize(genre)
     @id = Random.rand(1000)
