@@ -1,3 +1,5 @@
+require './src/classes/music_albums/manage_music_album'
+
 class App
   def initialize
     @books = []
@@ -66,7 +68,7 @@ class App
   end
 
   def add_music_album
-    puts 'add music album'
+    ManageMusicAlbum.add_music_album(@music_albums)
   end
 
   def add_game
