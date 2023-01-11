@@ -1,6 +1,7 @@
 class Book 
-    def add_item
-        puts 'add book'
+    def initialize(publisher, cover_state)
+        @publisher = publisher
+        @cover_state = cover_state
     end
 
 end
