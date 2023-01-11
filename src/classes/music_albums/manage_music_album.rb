@@ -3,7 +3,7 @@ require './src/classes/music_albums/genre'
 
 class ManageMusicAlbum
   def self.add_music_album(music_albums, genres)
-    puts 'Add music genre'
+    puts 'ADD A NEW MUSIC ALBUM'
     print 'Enter genre: '
     genre = gets.chomp.to_s
     print 'Enter author:'
@@ -20,8 +20,6 @@ class ManageMusicAlbum
     music_album.move_to_archive
     music_albums << music_album
     puts 'Music album added'
-    puts music_albums.length
-    puts genres.length
   end
 
   def self.validate_genre(genre, genres, music_album)

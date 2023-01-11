@@ -29,7 +29,9 @@ class App
 
     option = gets.chomp.to_s
     if @menu_options.key?(option)
+      puts ''
       @menu_options[option].call
+      puts ''
       run
     elsif option == '0'
       puts 'Thank you for using this app!'
@@ -45,7 +47,7 @@ class App
 
   def list_all_music_albums
     @music_albums.each_with_index do |music_album, index|
-      puts "#{index + 1} - #{music_album.genre.genre} - #{music_album.author} - #{music_album.label} - #{music_album.publish_date} - #{music_album.on_spotify}"
+      puts "(#{index + 1}) - #{music_album.genre.genre} - #{music_album.author} - #{music_album.label}"
     end
   end
 
@@ -54,7 +56,9 @@ class App
   end
 
   def list_all_genres
-    puts 'list all genres'
+    @genres.each_with_index do |genre, index|
+      puts "(#{index + 1}) - #{genre.genre}"
+    end
   end
 
   def list_all_labels
