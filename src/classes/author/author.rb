@@ -10,5 +10,6 @@ class Author
     return if @items.include?(item)
 
     @items.push(item)
+    item.author = self
   end
 end
