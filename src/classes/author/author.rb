@@ -5,4 +5,10 @@ class Author
     @last_name = last_name
     @items = []
   end
+
+  def add_item(item)
+    return if @items.include?(item)
+
+    @items.push(item)
+  end
 end
