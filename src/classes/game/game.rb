@@ -1,5 +1,5 @@
 class Game
-  def initialize(multiplayer = false, last_played_at)
+  def initialize(last_played_at, multiplayer: false)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
   end
