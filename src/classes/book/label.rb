@@ -15,4 +15,14 @@ class Label
     @items << item
     item.label = self
   end
+
+  def self.list_labels(things)
+    labels = []
+    things.each do |thing|
+      labels << thing.label if thing.instance_of?(Book) && !labels.include?(thing.label.title)
+    end
+    labels.each_with_index do |label, index|
+      puts "[#{index + 1}] (ID: #{label.id}) Label: #{label.title}"
+    end
+  end
 end
