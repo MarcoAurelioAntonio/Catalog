@@ -1,4 +1,4 @@
-require_relative '../item/item.rb'
+require_relative '../item/item'
 require 'date'
 
 class Book < Item
@@ -8,7 +8,6 @@ class Book < Item
     super(date)
     @publisher = publisher
     @cover_state = cover_state
-    
   end
 
   def can_be_archived?
@@ -16,6 +15,6 @@ class Book < Item
   end
 end
 
-oobjt = Book.new('Penguin', 'good', 'fiction', 'J. K. Rowling', 'Harry Potter and the Philosopher\'s Stone', '1997-06-26') 
+oobjt = Book.new('Penguin', 'good', '2010-01-01')
 puts oobjt.inspect
 puts oobjt.can_be_archived?
