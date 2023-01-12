@@ -3,11 +3,11 @@ require 'date'
 class Item
   attr_accessor :genre, :author, :label, :publish_date
 
-  def initialize(date)
+  def initialize(date, genre, author, label)
     @id = Random.rand(1000)
-    @genre = nil
-    @author = nil
-    @label = nil
+    @genre = genre
+    @author = author
+    @label = label
     @publish_date = Date.parse(date)
     @archved = false
   end
