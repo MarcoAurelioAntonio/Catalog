@@ -1,3 +1,5 @@
+require './src/classes/music_albums/manage_music_album'
+
 class App
   def initialize
     @books = []
@@ -27,7 +29,9 @@ class App
 
     option = gets.chomp.to_s
     if @menu_options.key?(option)
+      puts ''
       @menu_options[option].call
+      puts ''
       run
     elsif option == '0'
       puts 'Thank you for using this app!'
@@ -42,7 +46,9 @@ class App
   end
 
   def list_all_music_albums
-    puts 'list all music albums'
+    @music_albums.each_with_index do |music_album, index|
+      puts "(#{index + 1}) - #{music_album.genre.genre} - #{music_album.author} - #{music_album.label}"
+    end
   end
 
   def list_all_games
@@ -50,7 +56,9 @@ class App
   end
 
   def list_all_genres
-    puts 'list all genres'
+    @genres.each_with_index do |genre, index|
+      puts "(#{index + 1}) - #{genre.genre}"
+    end
   end
 
   def list_all_labels
@@ -66,7 +74,7 @@ class App
   end
 
   def add_music_album
-    puts 'add music album'
+    ManageMusicAlbum.add_music_album(@music_albums, @genres)
   end
 
   def add_game
