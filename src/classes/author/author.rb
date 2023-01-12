@@ -6,9 +6,9 @@ class Author
     @items = []
   end
 
-  def add_item
-    return if @items.include?(self)
+  def add_item(item)
+    return if @items.include?(item)
 
-    @items.push(self)
+    @items.push(item)
   end
 end
