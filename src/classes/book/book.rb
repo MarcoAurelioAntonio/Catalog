@@ -29,9 +29,22 @@ class Book < Item
     print 'Enter label:'
     label = gets.chomp.to_s
     book = Book.new(publisher, cover_state, date, genre, author, label)
-    puts book.inspect
+    book.move_to_archive
+    books << book
+    # puts book.inspect
     puts 'Book added'
   end
+
+  def self.validate_genre(label, labels, book)
+    if labels.select { |book| book.title == title && book.color == color }.empty?
+      new_label = label.new(title, color)
+      new_label.add_item(book)
+      labels << new_label
+    else
+      labels.select { |book| book.title == title && book.color == color }[0].add_item(book)
+    end
+  end  
+
 end
 
 
