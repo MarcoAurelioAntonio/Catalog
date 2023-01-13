@@ -71,6 +71,7 @@ class App
   def list_all_authors
     puts @authors.each do |author|
       puts "#{author.author}"
+    end
   end
 
   def add_book

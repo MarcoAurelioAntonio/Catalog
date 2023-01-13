@@ -21,6 +21,15 @@ class ManageGame
     game.author = author
     game.move_to_archive
     games << game
+    save_game(game)
     puts 'Game Successfully Added'
+  end
+
+  def save_game
+    File.open('game.json', 'w') do |file|
+      game1 = { class: game.class, genre: game.genre, label: game.label, multiplayer: game.multiplayer,
+                author: game.author, publish_date: game.publish_date, last_played_at: game.last_played_at}
+    file.write(JSON.generate(game1))
+    end
   end
 end
