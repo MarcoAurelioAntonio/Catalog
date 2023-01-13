@@ -1,7 +1,7 @@
 require_relative './game'
 
 class ManageGame
-  def add_game(games)
+  def add_game(g)
     puts 'Add a New Game'
     puts 'Enter Genre: '
     genre = gets.chomp.to_s
@@ -20,7 +20,7 @@ class ManageGame
     game.label = label
     game.author = author
     game.move_to_archive
-    games << game
+    g << game
     save_game(game)
     puts 'Game Successfully Added'
   end

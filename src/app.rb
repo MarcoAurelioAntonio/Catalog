@@ -72,7 +72,7 @@ class App
 
   def list_all_authors
     puts @authors.each do |author|
-      puts "#{author.to_s}"
+      puts author.to_s
     end
   end
 
