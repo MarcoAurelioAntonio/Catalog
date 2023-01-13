@@ -1,4 +1,5 @@
 require './src/classes/music_albums/manage_music_album'
+require './src/classes/book/book.rb'
 
 class App
   def initialize
@@ -70,7 +71,7 @@ class App
   end
 
   def add_book
-    puts 'add book'
+    Book.add_book
   end
 
   def add_music_album
