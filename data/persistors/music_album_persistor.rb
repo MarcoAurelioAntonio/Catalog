@@ -1,6 +1,6 @@
 require 'json'
 require './src/classes/music_album/music_album'
-require_relative '.genre_persistor'
+require_relative './genre_persistor'
 
 module MusicAlbumPersistor
   SOURCE = './data/DB/music_album.json'.freeze
@@ -9,15 +9,16 @@ module MusicAlbumPersistor
     return [] unless File.exist?(SOURCE)
 
     deserialized_music_albums = JSON.parse(File.read(SOURCE))
-    deserialized_music_albums.map { |music_album| json_to_music_album(*music_album) }
+    deserialized_music_albums.map { |music_album| json_to_music_album(music_album) }
   end
 
   def self.json_to_music_album(json)
     # music_album = MusicAlbum.new(on_spotify, date, genre, author, label)
 
-    new_music_album = music_album.new(json['on_spotify'], json['publish_date'], json['genre'], json['author'],
-                                      json['label'])
+    new_music_album = MusicAlbum.new(json['on_spotify'], json['publish_date'], 'genre', json['author'],
+                                     json['label'])
     new_music_album.id = json['id']
+    new_music_album.genre = GenrePersistor.json_to_genre(json['genre'])
     new_music_album.archived = json['archived']
     new_music_album
   end

@@ -1,11 +1,12 @@
 require './src/classes/music_album/manage_music_album'
 require './data/persistors/genre_persistor'
+require './data/persistors/music_album_persistor'
 require './src/classes/book/book'
 
 class App
   def initialize
     @books = []
-    @music_albums = []
+    @music_albums = MusicAlbumPersistor.read_from_file
     @games = []
     @genres = GenrePersistor.read_from_file
     @labels = []
@@ -86,6 +87,7 @@ class App
 
   def save_data
     GenrePersistor.write_to_file(@genres)
+    MusicAlbumPersistor.write_to_file(@music_albums)
     # Call other persistors
   end
 end

@@ -1,0 +1,15 @@
+[
+  {
+    "id": 608,
+    "genre": {
+      "id": 485,
+      "genre": "h",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "h",
+    "label": "h",
+    "publish_date": "2020-08-05",
+    "archived": null,
+    "on_spotify": "n"
+  }
+]

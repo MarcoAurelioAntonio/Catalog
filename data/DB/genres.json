@@ -8,5 +8,25 @@
     "id": 374,
     "genre": "b",
     "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 106,
+    "genre": "c",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 833,
+    "genre": "y",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 68,
+    "genre": "u",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 485,
+    "genre": "h",
+    "items": "Pending implementation of items serialization"
   }
 ]

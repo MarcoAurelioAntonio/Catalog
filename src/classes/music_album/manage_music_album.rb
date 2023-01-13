@@ -14,7 +14,7 @@ class ManageMusicAlbum
     date = gets.chomp.to_s
     print 'Is on spotify? (y/n):'
     on_spotify = gets.chomp.to_s
-    on_spotify = on_spotify == 'y'
+    # on_spotify = on_spotify == 'y'
     music_album = MusicAlbum.new(on_spotify, date, genre, author, label)
     validate_genre(genre, genres, music_album)
     music_album.move_to_archive
