@@ -1,5 +1,5 @@
-require './src/classes/music_albums/music_album'
-require './src/classes/music_albums/genre'
+require_relative './music_album'
+require_relative '../genre/genre'
 
 class ManageMusicAlbum
   def self.add_music_album(music_albums, genres)

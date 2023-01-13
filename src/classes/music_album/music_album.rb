@@ -1,4 +1,4 @@
-require './src/classes/item/item'
+require_relative '../item/item'
 
 class MusicAlbum < Item
   attr_reader :on_spotify

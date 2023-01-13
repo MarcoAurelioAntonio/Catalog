@@ -1,4 +1,4 @@
-require './src/classes/music_albums/manage_music_album'
+require_relative './classes/music_album/manage_music_album'
 
 class App
   def initialize
@@ -34,9 +34,9 @@ class App
       puts ''
       run
     elsif option == '0'
-      puts 'Thank you for using this app!'
+      puts "\nThank you for using this app!\n\n"
     else
-      puts 'That is not a valid option'
+      puts "\nThat is not a valid option\n\n"
       run
     end
   end
