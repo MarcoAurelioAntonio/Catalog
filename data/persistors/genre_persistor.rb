@@ -1,8 +1,8 @@
 require 'json'
-require '.src/classes/genre/genre'
+require './src/classes/genre/genre'
 
-module PersistGenre
-  SOURCE = '.src/data/DB/genres.json'.freeze
+module GenrePersistor
+  SOURCE = './data/DB/genres.json'.freeze
 
   def self.read_from_file
     return [] unless File.exist?(SOURCE)
@@ -29,7 +29,7 @@ module PersistGenre
       id: genre_item.id,
       genre: genre_item.genre,
       # Change this to add serialized items using an appropriate method
-      items: 'items'
+      items: 'Pending implementation of items serialization'
     }
   end
 end

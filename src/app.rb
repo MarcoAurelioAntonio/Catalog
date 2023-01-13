@@ -1,11 +1,12 @@
 require './src/classes/music_album/manage_music_album'
+require './data/persistors/genre_persistor'
 
 class App
   def initialize
     @books = []
     @music_albums = []
     @games = []
-    @genres = []
+    @genres = GenrePersistor.read_from_file
     @labels = []
     @authors = []
     @menu_options = {
@@ -34,6 +35,7 @@ class App
       puts ''
       run
     elsif option == '0'
+      save_data
       puts "\nThank you for using this app!\n\n"
     else
       puts "\nThat is not a valid option\n\n"
@@ -79,5 +81,10 @@ class App
 
   def add_game
     puts 'add game'
+  end
+
+  def save_data
+    GenrePersistor.write_to_file(@genres)
+    # Call other persistors
   end
 end
