@@ -16,9 +16,6 @@ class ManageMusicAlbum
     on_spotify = gets.chomp.to_s
     on_spotify = on_spotify == 'y'
     music_album = MusicAlbum.new(on_spotify, date, genre, author, label)
-    music_album.author = author
-    music_album.label = label
-    music_album.genre = genre
     validate_genre(genre, genres, music_album)
     music_album.move_to_archive
     music_albums << music_album
