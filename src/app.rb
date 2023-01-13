@@ -1,5 +1,5 @@
 require './src/classes/music_albums/manage_music_album'
-require './src/classes/book/book.rb'
+require './src/classes/book/book'
 
 class App
   def initialize

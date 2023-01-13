@@ -32,7 +32,6 @@ class Book < Item
     puts book.inspect
     puts 'Book added'
   end
-
 end
 
 
@@ -42,6 +41,6 @@ end
 
 
 
-#oobjt = Book.new('publisher', 'good', '2019-01-01', 'genre', 'author', 'label')
-#puts oobjt.inspect
-#puts oobjt.can_be_archived?
+# oobjt = Book.new('publisher', 'good', '2019-01-01', 'genre', 'author', 'label')
+# puts oobjt.inspect
+# puts oobjt.can_be_archived?
