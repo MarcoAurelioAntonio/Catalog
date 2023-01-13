@@ -1,4 +1,5 @@
 require './src/classes/music_albums/manage_music_album'
+require './classes/game/manage_game'
 
 class App
   def initialize
@@ -52,7 +53,9 @@ class App
   end
 
   def list_all_games
-    puts 'list all games'
+    @games.each_with_index do |game, index|
+      puts "[#{index}]  #{game.label}  #{game.genre}  #{game.publish_date}  #{game.multiplayer}"
+    end
   end
 
   def list_all_genres
@@ -66,7 +69,8 @@ class App
   end
 
   def list_all_authors
-    puts 'list all authors'
+    puts @authors.each do |author|
+      puts "#{author.author}"
   end
 
   def add_book
@@ -78,6 +82,6 @@ class App
   end
 
   def add_game
-    puts 'add game'
+    ManageGame.add_game(@games, @authors)
   end
 end
