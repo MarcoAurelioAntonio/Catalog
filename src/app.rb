@@ -1,5 +1,6 @@
 require './src/classes/music_album/manage_music_album'
 require './data/persistors/genre_persistor'
+require './src/classes/book/book'
 
 class App
   def initialize
@@ -72,7 +73,7 @@ class App
   end
 
   def add_book
-    puts 'add book'
+    Book.add_book(@books, @labels)
   end
 
   def add_music_album
