@@ -11,5 +11,83 @@
     "publish_date": "2020-08-05",
     "archived": null,
     "on_spotify": "n"
+  },
+  {
+    "id": 781,
+    "genre": {
+      "id": 310,
+      "genre": "cg",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "g",
+    "label": "g",
+    "publish_date": "2023-02-09",
+    "archived": false,
+    "on_spotify": "n"
+  },
+  {
+    "id": 392,
+    "genre": {
+      "id": 507,
+      "genre": "i",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "i",
+    "label": "i",
+    "publish_date": "0900-02-01",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 700,
+    "genre": {
+      "id": 507,
+      "genre": "i",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "i",
+    "label": "i",
+    "publish_date": "2010-09-26",
+    "archived": true,
+    "on_spotify": true
+  },
+  {
+    "id": 690,
+    "genre": {
+      "id": 853,
+      "genre": "uy",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "i",
+    "label": "i",
+    "publish_date": "2019-07-02",
+    "archived": false,
+    "on_spotify": true
+  },
+  {
+    "id": 110,
+    "genre": {
+      "id": 625,
+      "genre": "oi",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "oi",
+    "label": "oi",
+    "publish_date": "2022-12-19",
+    "archived": false,
+    "on_spotify": true
+  },
+  {
+    "id": 174,
+    "genre": {
+      "id": 23,
+      "genre": "+",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "f",
+    "label": "f",
+    "publish_date": "2011-11-11",
+    "archived": true,
+    "on_spotify": true
   }
 ]

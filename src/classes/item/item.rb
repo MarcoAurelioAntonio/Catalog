@@ -9,7 +9,7 @@ class Item
     @author = author
     @label = label
     @publish_date = Date.parse(date)
-    @archved = false
+    @archived = false
   end
 
   def can_be_archived?

@@ -13,8 +13,6 @@ module MusicAlbumPersistor
   end
 
   def self.json_to_music_album(json)
-    # music_album = MusicAlbum.new(on_spotify, date, genre, author, label)
-
     new_music_album = MusicAlbum.new(json['on_spotify'], json['publish_date'], 'genre', json['author'],
                                      json['label'])
     new_music_album.id = json['id']

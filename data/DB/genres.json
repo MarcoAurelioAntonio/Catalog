@@ -28,5 +28,30 @@
     "id": 485,
     "genre": "h",
     "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 310,
+    "genre": "cg",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 507,
+    "genre": "i",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 853,
+    "genre": "uy",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 625,
+    "genre": "oi",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 23,
+    "genre": "+",
+    "items": "Pending implementation of items serialization"
   }
 ]
