@@ -1,4 +1,5 @@
 require_relative '../item/item'
+require_relative '../book/label'
 require 'date'
 
 class Book < Item
@@ -14,8 +15,8 @@ class Book < Item
     (Date.today - @publish_date) > 3652 or @cover_state == 'bad'
   end
 
-  def self.add_book
-    puts 'ADD A NEW BOOK'
+  def self.add_book(books, labels)
+    # puts 'ADD A NEW BOOK'
     print 'Enter publisher: '
     publisher = gets.chomp.to_s
     print 'Enter cover state (good/bad):'
@@ -29,30 +30,29 @@ class Book < Item
     print 'Enter label:'
     label = gets.chomp.to_s
     book = Book.new(publisher, cover_state, date, genre, author, label)
-    book.move_to_archive
+    book.author = author
+    book.label = label
+    book.genre = genre
+    book.publish_date = date
+    validate_label(labels, book)
     books << book
-    # puts book.inspect
     puts 'Book added'
   end
 
-  def self.validate_genre(label, labels, book)
-    if labels.select { |book| book.title == title && book.color == color }.empty?
-      new_label = label.new(title, color)
+  def self.validate_label(labels, book)
+    print 'Enter label title:'
+    title = gets.chomp.to_s
+    print 'Enter label color:'
+    color = gets.chomp.to_s
+    if labels.select { |book_label| book_label.title == title && book_label.color == color }.empty?
+      new_label = Label.new(title, color)
       new_label.add_item(book)
       labels << new_label
     else
-      labels.select { |book| book.title == title && book.color == color }[0].add_item(book)
+      labels.select { |book_label| book_label.title == title && book_label.color == color }[0].add_item(book)
     end
-  end  
-
+  end
 end
-
-
-
-
-
-
-
 
 # oobjt = Book.new('publisher', 'good', '2019-01-01', 'genre', 'author', 'label')
 # puts oobjt.inspect

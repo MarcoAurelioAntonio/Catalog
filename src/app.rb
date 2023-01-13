@@ -71,7 +71,7 @@ class App
   end
 
   def add_book
-    Book.add_book
+    Book.add_book(@books, @labels)
   end
 
   def add_music_album
