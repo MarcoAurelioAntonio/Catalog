@@ -1,4 +1,4 @@
-require_relative './classes/music_album/manage_music_album'
+require './src/classes/music_album/manage_music_album'
 
 class App
   def initialize
