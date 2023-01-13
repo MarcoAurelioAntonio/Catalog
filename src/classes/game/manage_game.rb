@@ -1,7 +1,7 @@
 require_relative './game'
 
 class ManageGame
-  def add(gam)
+  def add(gam, authors)
     puts 'Add a New Game'
     puts 'Enter Genre: '
     genre = gets.chomp.to_s

@@ -85,6 +85,6 @@ class App
   end
 
   def add_game
-    ManageGame.add_game(@games, @authors)
+    ManageGame.add(@games, @authors)
   end
 end
