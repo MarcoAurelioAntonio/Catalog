@@ -9,6 +9,6 @@ class Game < Item
   end
 
   def can_be_archived
-    return true if can_be_archived && @last_played_at < (365 * 2)
+    return true if date > 36502  && @last_played_at < (365 * 2)
   end
 end
