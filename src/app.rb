@@ -71,8 +71,8 @@ class App
   end
 
   def list_all_authors
-    puts @authors.each do |author|
-      puts "#{author.author}"
+    puts @authors.each do |auth|
+      puts "#{auth.author}"
     end
   end
 

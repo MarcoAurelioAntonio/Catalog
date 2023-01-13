@@ -1,14 +1,14 @@
 require_relative './game'
 
 class ManageGame
-  def add_game(games, author)
+  def add_game(games, auths)
     puts 'Add a New Game'
     puts 'Enter Genre: '
     genre = gets.chomp.to_s
     puts 'Enter Label: '
     label = gets.chomp.to_s
     puts 'Does it include multiplayer?.(y/n)'
-    multiplayer = gets.chomp.to_s == y ? true : false
+    multiplayer = gets.chomp.to_s == y
     puts 'Enter Game Author: '
     author = gets.chomp.to_s
     puts 'Enter Release Date (yyyy-mm-dd): '
@@ -28,8 +28,8 @@ class ManageGame
   def save_game
     File.open('game.json', 'w') do |file|
       game1 = { class: game.class, genre: game.genre, label: game.label, multiplayer: game.multiplayer,
-                author: game.author, publish_date: game.publish_date, last_played_at: game.last_played_at}
-    file.write(JSON.generate(game1))
+                author: game.author, publish_date: game.publish_date, last_played_at: game.last_played_at }
+      file.write(JSON.generate(game1))
     end
   end
 end
