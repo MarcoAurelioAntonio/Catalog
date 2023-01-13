@@ -15,7 +15,7 @@ class ManageMusicAlbum
     print 'Is on spotify? (y/n):'
     on_spotify = gets.chomp.to_s
     on_spotify = on_spotify == 'y'
-    music_album = MusicAlbum.new(date, on_spotify)
+    music_album = MusicAlbum.new(on_spotify, date, genre, author, label)
     music_album.author = author
     music_album.label = label
     music_album.genre = genre
@@ -25,13 +25,13 @@ class ManageMusicAlbum
     puts 'Music album added'
   end
 
-  def self.validate_genre(genre, genres, music_album)
-    if genres.select { |item| item.genre == genre }.empty?
+  def self.validate_genre(genre, genres, item)
+    if genres.select { |genre_item| genre_item.genre == genre }.empty?
       new_genre = Genre.new(genre)
-      new_genre.add_item(music_album)
+      new_genre.add_item(item)
       genres << new_genre
     else
-      genres.select { |item| item.genre == genre }[0].add_item(music_album)
+      genres.select { |genre_item| genre_item.genre == genre }[0].add_item(item)
     end
   end
 end
