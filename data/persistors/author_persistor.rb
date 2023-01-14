@@ -16,10 +16,10 @@ module AuthorPersistor
     File.write(SOURCE, JSON.pretty_generate(serialized_authors))
   end
 
-  def self.author_to_json(author)
+  def self.author_to_json(auth)
     {
-      'first_name' => author.first_name,
-      'last_name' => author.last_name
+      'first_name' => auth,
+      'last_name' => '...'
     }
   end
 

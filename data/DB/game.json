@@ -1,47 +1,15 @@
 [
   {
-    "author": "Activision",
-    "genre": "Shooter",
-    "label": "Call of Duty",
-    "publish_date": "2016-05-05",
-    "multiplayer": "true",
-    "archived": false,
-    "last_played_at": "2017-10-10"
-  },
-  {
-    "author": "Activision",
-    "genre": "Shooter",
-    "label": "Call of Duty",
-    "publish_date": "2014-10-14",
-    "multiplayer": "true",
-    "archived": false,
-    "last_played_at": "2018-06-29"
-  },
-  {
-    "author": "Epic Games",
-    "genre": "Shooter",
-    "label": "Fortnite",
-    "publish_date": "2026-02-23",
-    "multiplayer": "true",
-    "archived": false,
-    "last_played_at": "2027-12-10"
-  },
-  {
-    "author": "fgfdgf",
-    "genre": "fgfsgf",
-    "label": "fdgfgfs",
-    "publish_date": "2006-10-10",
-    "multiplayer": "sdfdsf",
+    "id": 152,
+    "author": {
+      "first_name": "#<Game:0x00000030003231f8>",
+      "last_name": "..."
+    },
+    "genre": "dadfdf",
+    "label": "sdfds",
+    "publish_date": "2012-10-10",
+    "multiplayer": "ddsf",
     "archived": true,
-    "last_played_at": "2007-10-01"
-  },
-  {
-    "author": "Atlas",
-    "genre": "Racing",
-    "label": "Forza",
-    "publish_date": "2028-09-10",
-    "multiplayer": "true",
-    "archived": false,
-    "last_played_at": "2030-12-12"
+    "last_played_at": "2015-01-23"
   }
 ]
