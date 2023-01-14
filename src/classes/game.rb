@@ -30,10 +30,9 @@ class Game < Item
     puts 'Enter Last Played Date (yyyy-mm-dd): '
     last_played_at = gets.chomp.to_s
     game = Game.new(last_played_at, multiplayer, publish_date, genre, author, label)
-    author.add_item(game)
-    puts game.author.id
-    authors << author
     game.move_to_archive
+    author.add_item(game)
+    authors << author
     games << game
     puts 'Game Successfully Added'
   end

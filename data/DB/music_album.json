@@ -1,3 +1,11 @@
 [
-
+  {
+    "id": 271,
+    "genre_id": 582,
+    "author": "f",
+    "label": "f",
+    "publish_date": "2022-02-02",
+    "archived": false,
+    "on_spotify": false
+  }
 ]

@@ -18,7 +18,6 @@ class Book < Item
   end
 
   def self.add_book(books, labels)
-    # puts 'ADD A NEW BOOK'
     print 'Enter publisher: '
     publisher = gets.chomp.to_s
     print 'Enter cover state (good/bad):'
@@ -29,29 +28,14 @@ class Book < Item
     genre = gets.chomp.to_s
     print 'Enter author:'
     author = gets.chomp.to_s
-    print 'Enter label:'
-    label = gets.chomp.to_s
+    puts 'Enter label:'
+    label = Label.input_label
     book = Book.new(publisher, cover_state, date, genre, author, label)
     book.publish_date = date
-    validate_label(labels, book)
     book.move_to_archive
+    label.add_item(book)
+    labels << label
     books << book
-    BookPersistor.write_to_file(books)
     puts 'Book added'
-  end
-
-  def self.validate_label(labels, book)
-    print 'Enter label title:'
-    title = gets.chomp.to_s
-    print 'Enter label color:'
-    color = gets.chomp.to_s
-    if labels.select { |book_label| book_label.title == title && book_label.color == color }.empty?
-      new_label = Label.new(title, color)
-      new_label.add_item(book)
-      labels << new_label
-    else
-      labels.select { |book_label| book_label.title == title && book_label.color == color }[0].add_item(book)
-    end
-    LabelPersistor.write_to_file(labels)
   end
 end

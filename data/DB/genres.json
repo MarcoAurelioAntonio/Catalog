@@ -1,3 +1,12 @@
 [
-
+  {
+    "id": 582,
+    "genre": "f",
+    "items": [
+      {
+        "item_id": 271,
+        "item_class": "MusicAlbum"
+      }
+    ]
+  }
 ]
