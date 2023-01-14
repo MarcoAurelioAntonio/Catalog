@@ -22,22 +22,7 @@ class ManageGame
     game.author = author
     game.move_to_archive
     gam << game
-    save_game(game)
+    authors.push(author)
     puts 'Game Successfully Added'
-  end
-
-  def self.save_game(game)
-      game1 = { 'class' => game.class, 'genre' => game.genre, 'label' => game.label, 'multiplayer' => game.multiplayer,
-                'author' => game.author, 'date' => game.publish_date, 'last_played_at' => game.last_played_at }
-      File.open('./game.json', 'a+') do |file|
-      file.write(game1.to_json)
-    end
-  end
-
-  def self.save_author(author)
-    File.open('author.json', 'a+') do |file|
-      author1 = { author: author }
-      file.write(JSON.generate(author1))
-    end
   end
 end
