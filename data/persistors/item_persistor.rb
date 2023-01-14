@@ -10,7 +10,7 @@ module ItemPersistor
 
   # Item component: Referst to label, author, or genre
 
-  def self.deserialize_items_all(genres, music_albums, books, games)
+  def self.read_from_file(genres, music_albums, books, games)
     source_file = select_source(genres)
     return [] unless File.exist?(source_file)
 
@@ -18,7 +18,7 @@ module ItemPersistor
     genres.each do |genre|
       temp_genre = genres_array
         .find { |genres_obj| genres_obj['id'] == genre.id }
-      deserialize_item(genre, temp_genre, music_albums, books, games)
+      find_item(genre, temp_genre, music_albums, books, games)
     end
   end
 
@@ -33,7 +33,7 @@ module ItemPersistor
     end
   end
 
-  def self.deserialize_item(genre, temp_genre, music_albums, books, games)
+  def self.find_item(genre, temp_genre, music_albums, books, games)
     temp_genre['items'].each do |item|
       temp_item = case item['item_class']
                   when 'MusicAlbum'

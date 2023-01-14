@@ -18,6 +18,10 @@
       {
         "item_id": 396,
         "item_class": "MusicAlbum"
+      },
+      {
+        "item_id": 348,
+        "item_class": "MusicAlbum"
       }
     ]
   }
