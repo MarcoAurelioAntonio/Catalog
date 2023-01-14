@@ -53,5 +53,25 @@
     "id": 23,
     "genre": "+",
     "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 162,
+    "genre": "r",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 827,
+    "genre": "f",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 722,
+    "genre": "ggg",
+    "items": "Pending implementation of items serialization"
+  },
+  {
+    "id": 281,
+    "genre": "zzz",
+    "items": "Pending implementation of items serialization"
   }
 ]

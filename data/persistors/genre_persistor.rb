@@ -8,10 +8,10 @@ module GenrePersistor
     return [] unless File.exist?(SOURCE)
 
     deserialized_genres = JSON.parse(File.read(SOURCE))
-    deserialized_genres.map { |genre| json_to_genre(genre) }
+    deserialized_genres.map { |genre| json_to_ruby(genre) }
   end
 
-  def self.json_to_genre(json)
+  def self.json_to_ruby(json)
     new_genre = Genre.new(json['genre'])
     new_genre.id = json['id']
     # Change this to add items (books, music albums, movies)
@@ -20,11 +20,11 @@ module GenrePersistor
   end
 
   def self.write_to_file(genres)
-    serialized_genres = genres.map { |genre| genre_to_json(genre) }
+    serialized_genres = genres.map { |genre| ruby_to_json(genre) }
     File.write(SOURCE, JSON.pretty_generate(serialized_genres))
   end
 
-  def self.genre_to_json(genre_item)
+  def self.ruby_to_json(genre_item)
     {
       id: genre_item.id,
       genre: genre_item.genre,

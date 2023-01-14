@@ -89,5 +89,44 @@
     "publish_date": "2011-11-11",
     "archived": true,
     "on_spotify": true
+  },
+  {
+    "id": 409,
+    "genre": {
+      "id": 827,
+      "genre": "f",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "f",
+    "label": "f",
+    "publish_date": "2022-02-02",
+    "archived": false,
+    "on_spotify": true
+  },
+  {
+    "id": 772,
+    "genre": {
+      "id": 722,
+      "genre": "ggg",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "ggg",
+    "label": "gg",
+    "publish_date": "2222-12-22",
+    "archived": false,
+    "on_spotify": true
+  },
+  {
+    "id": 272,
+    "genre": {
+      "id": 281,
+      "genre": "zzz",
+      "items": "Pending implementation of items serialization"
+    },
+    "author": "zzz",
+    "label": "zzz",
+    "publish_date": "2021-01-01",
+    "archived": false,
+    "on_spotify": true
   }
 ]
