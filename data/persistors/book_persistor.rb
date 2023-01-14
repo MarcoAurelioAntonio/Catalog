@@ -1,5 +1,6 @@
 require 'json'
 require './src/classes/book'
+require './data/persistors/label_persistor'
 
 module BookPersistor
   SOURCE = './data/DB/books.json'.freeze
@@ -24,7 +25,7 @@ module BookPersistor
       'publish_date' => book.publish_date,
       'genre' => book.genre,
       'author' => book.author,
-      'label' => book.label
+      'label' => LabelPersistor.label_to_json(book.label)
     }
   end
 

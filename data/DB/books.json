@@ -1,3 +1,28 @@
 [
-
+  {
+    "id": 511,
+    "publisher": "dfghf",
+    "cover_state": "dghdf",
+    "publish_date": "2000-01-01",
+    "genre": "dhfghdfgh",
+    "author": "dfhfg",
+    "label": {
+      "id": 477,
+      "title": "fhdfh",
+      "color": "dfghdf"
+    }
+  },
+  {
+    "id": 503,
+    "publisher": "lkjhkljh",
+    "cover_state": "gsdfgds",
+    "publish_date": "2000-05-04",
+    "genre": "xsfgasd",
+    "author": "sdfgdfs",
+    "label": {
+      "id": 378,
+      "title": "sdgsdg",
+      "color": "sdgdfs"
+    }
+  }
 ]
