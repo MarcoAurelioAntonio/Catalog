@@ -1,22 +1,22 @@
 require 'json'
-require './src/classes/game/game'
+require './src/classes/game'
 require_relative './author_persistor'
 
 module GamePersistor
   SOURCE = './data/DB/game.json'.freeze
 
-  def self.read_from_file
+  def self.read_from_file(authors)
     return [] unless File.exist?(SOURCE)
 
     deserialized_music_albums = JSON.parse(File.read(SOURCE))
-    deserialized_music_albums.map { |game| json_to_ruby(game) }
+    deserialized_music_albums.map { |game| json_to_ruby(game, authors) }
   end
 
-  def self.json_to_ruby(json)
+  def self.json_to_ruby(json, authors)
     new_game = Game.new(json['last_played_at'], json['multiplayer'], json['publish_date'], json['genre'],
-          'author', json['label'])
+                        'author', json['label'])
     new_game.archived = json['archived']
-    new_game.author = AuthorPersistor.json_to_author(json['author'])
+    new_game.author = authors.find { |author| author.id == json['author_id'] }
     new_game
   end
 
@@ -28,7 +28,7 @@ module GamePersistor
   def self.ruby_to_json(game)
     {
       'id' => game.id,
-      'author' => AuthorPersistor.author_to_json(game),
+      'author_id' => game.author.id,
       'genre' => game.genre,
       'label' => game.label,
       'publish_date' => game.publish_date,

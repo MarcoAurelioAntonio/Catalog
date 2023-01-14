@@ -1,5 +1,5 @@
 require 'json'
-require './src/classes/author/author'
+require './src/classes/author'
 
 module AuthorPersistor
   SOURCE = './data/DB/author.json'.freeze

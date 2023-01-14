@@ -3,6 +3,9 @@ require './data/persistors/music_album_persistor'
 require './data/persistors/book_persistor'
 require './data/persistors/label_persistor'
 require './data/persistors/item_persistor'
+require './data/persistors/author_persistor'
+require './data/persistors/game_persistor'
+
 require './src/classes/book'
 require './src/classes/music_album'
 require './src/classes/game'
@@ -95,7 +98,7 @@ class App
   end
 
   def add_game
-    Game.add_game(@games)
+    Game.add_game(@games, @authors)
   end
 
   def save_data
@@ -104,5 +107,6 @@ class App
     GenrePersistor.write_to_file(@genres)
     BookPersistor.write_to_file(@books)
     LabelPersistor.write_to_file(@labels)
+    GamePersistor.write_to_file(@games)
   end
 end
