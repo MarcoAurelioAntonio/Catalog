@@ -24,35 +24,42 @@ CREATE TABLE label (
 
 CREATE TABLE items (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  genre_id INTEGER NOT NULL,
-  author_id INTEGER NOT NULL,
-  source_id INTEGER NOT NULL,
-  label_id INTEGER NOT NULL,
+  genre VARCHAR NOT NULL,
+  author VARCHAR NOT NULL,
+  label VARCHAR NOT NULL,
   published_date DATE NOT NULL,
-  archived BOOLEAN NOT NULL,
-  FOREIGN KEY (genre_id) REFERENCES genre(id),
-  FOREIGN KEY (author_id) REFERENCES author(id),
-  FOREIGN KEY (source_id) REFERENCES source(id),
-  FOREIGN KEY (label_id) REFERENCES label(id)
+  archived BOOLEAN NOT NULL
 )
 
 CREATE TABLE books (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   publisher VARCHAR(100) NOT NULL,
   cover_state VARCHAR(100) NOT NULL,
-  FOREIGN KEY (id) REFERENCES items(id)
+  genre VARCHAR(80) NOT NULL,
+  author VARCHAR(80) NOT NULL,
+  label VARCHAR(80) NOT NULL,
+  published_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL
 )
 
 CREATE TABLE games (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   multiplayer BOOLEAN NOT NULL,
   last_played_at DATE NOT NULL,
-  FOREIGN KEY (id) REFERENCES items(id)
+  genre VARCHAR(80) NOT NULL,
+  author VARCHAR(80) NOT NULL,
+  label VARCHAR(80) NOT NULL,
+  published_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL
 )
 
 CREATE TABLE music_albums (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   on_spotify BOOLEAN NOT NULL,
-  FOREIGN KEY (id) REFERENCES items(id)
+  genre VARCHAR(80) NOT NULL,
+  author VARCHAR(80) NOT NULL,
+  label VARCHAR(80) NOT NULL,
+  published_date DATE NOT NULL
+  archived BOOLEAN NOT NULL
 )
 
