@@ -1,5 +1,6 @@
 require 'json'
 require './src/classes/author'
+require './data/persistors/item_persistor'
 
 module AuthorPersistor
   SOURCE = './data/DB/author.json'.freeze
@@ -16,14 +17,18 @@ module AuthorPersistor
     File.write(SOURCE, JSON.pretty_generate(serialized_authors))
   end
 
-  def self.author_to_json(auth)
+  def self.author_to_json(author_item)
     {
-      'first_name' => auth,
-      'last_name' => '...'
+      'id' => author_item.id,
+      'first_name' => author_item.first_name,
+      'last_name' => author_item.last_name,
+      'items' => author_item.items.map { |item| ItemPersistor.ruby_to_json(item) }
     }
   end
 
   def self.json_to_author(json)
-    Author.new(json['first_name'], json['last_name'])
+    new_author = Author.new(json['first_name'], json['last_name'])
+    new_author.id = json['id']
+    new_author
   end
 end

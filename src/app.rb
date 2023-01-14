@@ -14,10 +14,10 @@ class App
   def initialize
     @genres = GenrePersistor.read_from_file
     @labels = LabelPersistor.read_from_file
-    @authors = []
+    @authors = AuthorPersistor.read_from_file
     @music_albums = MusicAlbumPersistor.read_from_file(@genres)
     @books = BookPersistor.read_from_file
-    @games = []
+    @games = GamePersistor.read_from_file(@authors)
     @menu_options = {
       '1' => method(:list_all_books),
       '2' => method(:list_all_music_albums),
@@ -30,6 +30,7 @@ class App
       '9' => method(:add_game)
     }
     ItemPersistor.read_from_file(@genres, @music_albums, @books, @games)
+    ItemPersistor.read_from_file(@authors, @music_albums, @books, @games)
     # Add ItemPersistor.read_from_file for @labels and @authors
   end
 
@@ -108,5 +109,6 @@ class App
     BookPersistor.write_to_file(@books)
     LabelPersistor.write_to_file(@labels)
     GamePersistor.write_to_file(@games)
+    AuthorPersistor.write_to_file(@authors)
   end
 end

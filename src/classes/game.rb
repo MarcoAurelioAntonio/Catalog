@@ -31,19 +31,10 @@ class Game < Item
     last_played_at = gets.chomp.to_s
     game = Game.new(last_played_at, multiplayer, publish_date, genre, author, label)
     author.add_item(game)
+    puts game.author.id
     authors << author
     game.move_to_archive
     games << game
-
-    save_game(game)
     puts 'Game Successfully Added'
-  end
-
-  def self.save_game(game)
-    game1 = { 'class' => game.class, 'genre' => game.genre, 'label' => game.label, 'multiplayer' => game.multiplayer,
-              'author' => game.author, 'date' => game.publish_date, 'last_played_at' => game.last_played_at }
-    File.open('./game.json', 'a+') do |file|
-      file.write(game1.to_json)
-    end
   end
 end
