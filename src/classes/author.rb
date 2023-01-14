@@ -16,9 +16,9 @@ class Author
   end
 
   def self.input_author
-    puts 'Enter Author First Name: '
+    print '  Enter Author First Name: '
     first_name = gets.chomp.to_s
-    puts 'Enter Author Last Name: '
+    print '  Enter Author Last Name: '
     last_name = gets.chomp.to_s
     Author.new(first_name, last_name)
   end

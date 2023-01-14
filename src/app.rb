@@ -16,7 +16,7 @@ class App
     @labels = LabelPersistor.read_from_file
     @authors = AuthorPersistor.read_from_file
     @music_albums = MusicAlbumPersistor.read_from_file(@genres)
-    @books = BookPersistor.read_from_file(@labels)
+    @books = BookPersistor.read_from_file(@labels, @authors, @genres)
     @games = GamePersistor.read_from_file(@authors)
     @menu_options = {
       '1' => method(:list_all_books),

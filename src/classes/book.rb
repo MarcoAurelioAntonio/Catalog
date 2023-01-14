@@ -26,9 +26,9 @@ class Book < Item
     date = gets.chomp.to_s
     print 'Enter genre:'
     genre = Genre.new(gets.chomp.to_s)
-    puts 'Enter author:'
+    puts 'Enter author'
     author = Author.input_author
-    puts 'Enter label:'
+    puts 'Enter label'
     label = Label.input_label
     book = Book.new(publisher, cover_state, date, genre, author, label)
     book.publish_date = date

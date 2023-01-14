@@ -17,9 +17,9 @@ class Label
   end
 
   def self.input_label
-    print 'Enter label title:'
+    print '  Enter label title:'
     title = gets.chomp.to_s
-    print 'Enter label color:'
+    print '  Enter label color:'
     color = gets.chomp.to_s
     Label.new(title, color)
   end

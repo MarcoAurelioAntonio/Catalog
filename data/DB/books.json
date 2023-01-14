@@ -1,11 +1,11 @@
 [
   {
-    "id": 483,
-    "publisher": "d",
+    "id": 461,
+    "publisher": "a",
     "cover_state": "good",
-    "publish_date": "2020/02/02",
-    "genre": "#<Genre:0x0000020720a55478>",
-    "author": "#<Author:0x0000020720a55108>",
-    "label": 16
+    "publish_date": "2022/02/08",
+    "genre_id": 586,
+    "author_id": 526,
+    "label_id": 659
   }
 ]
