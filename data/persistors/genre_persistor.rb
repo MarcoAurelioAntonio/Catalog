@@ -1,5 +1,5 @@
 require 'json'
-require './src/classes/genre'
+require './src/classes/genre/genre'
 require './data/persistors/item_persistor'
 
 module GenrePersistor
@@ -15,6 +15,8 @@ module GenrePersistor
   def self.json_to_ruby(json)
     new_genre = Genre.new(json['genre'])
     new_genre.id = json['id']
+    # new_genre.items = json['items'].map { |item| ItemPersistor.json_to_ruby(item) }
+    new_genre.items = json['items']
     new_genre
   end
 
@@ -27,7 +29,8 @@ module GenrePersistor
     {
       id: genre_item.id,
       genre: genre_item.genre,
-      items: genre_item.items.map { |item| ItemPersistor.ruby_to_json(item) }
+      # items: genre_item.items.map { |item| ItemPersistor.ruby_to_json(item) }
+      items: genre_item.items
     }
   end
 end

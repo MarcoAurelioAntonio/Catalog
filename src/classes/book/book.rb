@@ -1,5 +1,5 @@
-require_relative './item'
-require_relative './label'
+require_relative '../item/item'
+require_relative '../book/label'
 require 'date'
 require './data/persistors/book_persistor'
 require './data/persistors/label_persistor'
