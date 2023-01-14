@@ -91,7 +91,11 @@ class App
   end
 
   def add_book
-    Book.add_book(@books, @labels)
+    book = Book.add_book
+    @books << book
+    @labels << book.label
+    @genres << book.genre
+    @authors << book.author
   end
 
   def add_music_album
@@ -99,6 +103,11 @@ class App
   end
 
   def add_game
+    # game = Game.add_game
+    # @games << game
+    # @authors << game.author
+    # @genres << game.genre
+    # @labels << game.label
     Game.add_game(@games, @authors)
   end
 

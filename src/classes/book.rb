@@ -1,8 +1,8 @@
 require_relative './item'
 require_relative './label'
+require_relative './author'
+require_relative './genre'
 require 'date'
-require './data/persistors/book_persistor'
-require './data/persistors/label_persistor'
 
 class Book < Item
   attr_accessor :publisher, :cover_state
@@ -17,7 +17,7 @@ class Book < Item
     (Date.today - Date.parse(@publish_date)) > 3652 or @cover_state == 'bad'
   end
 
-  def self.add_book(books, labels)
+  def self.add_book
     print 'Enter publisher: '
     publisher = gets.chomp.to_s
     print 'Enter cover state (good/bad):'
@@ -25,17 +25,18 @@ class Book < Item
     print 'Enter publish date (YYYY-MM-DD):'
     date = gets.chomp.to_s
     print 'Enter genre:'
-    genre = gets.chomp.to_s
-    print 'Enter author:'
-    author = gets.chomp.to_s
+    genre = Genre.new(gets.chomp.to_s)
+    puts 'Enter author:'
+    author = Author.input_author
     puts 'Enter label:'
     label = Label.input_label
     book = Book.new(publisher, cover_state, date, genre, author, label)
     book.publish_date = date
     book.move_to_archive
+    author.add_item(book)
     label.add_item(book)
-    labels << label
-    books << book
+    genre.add_item(book)
     puts 'Book added'
+    book
   end
 end
