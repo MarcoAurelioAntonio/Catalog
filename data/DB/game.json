@@ -1,0 +1,20 @@
+[
+  {
+    "author": "Activision",
+    "genre": "Shooter",
+    "label": "Call of Duty",
+    "publish_date": "2016-05-05",
+    "multiplayer": "true",
+    "archived": false,
+    "last_played_at": "2017-10-10"
+  },
+  {
+    "author": "Activision",
+    "genre": "Shooter",
+    "label": "Call of Duty",
+    "publish_date": "2014-10-14",
+    "multiplayer": "true",
+    "archived": false,
+    "last_played_at": "2018-06-29"
+  }
+]

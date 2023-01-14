@@ -17,12 +17,13 @@ class ManageGame
     puts 'Enter Last Played Date (yyyy-mm-dd): '
     last_played_at = gets.chomp.to_s
     game = Game.new(last_played_at, multiplayer, publish_date, genre, author, label)
+    create_author = Author.new(author, 'Game Company')
     game.genre = genre
     game.label = label
     game.author = author
     game.move_to_archive
     gam << game
-    authors.push(author)
+    authors.push(create_author)
     puts 'Game Successfully Added'
   end
 end

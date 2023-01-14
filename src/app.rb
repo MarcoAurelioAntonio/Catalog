@@ -1,5 +1,7 @@
 require './src/classes/game/manage_game'
 require './src/classes/game/game'
+require './data/persistors/game_persistor'
+require './data/persistors/author_persistor'
 require './src/classes/music_album/manage_music_album'
 require './data/persistors/genre_persistor'
 require './data/persistors/music_album_persistor'
@@ -11,10 +13,10 @@ class App
   def initialize
     @books = BookPersistor.read_from_file
     @music_albums = MusicAlbumPersistor.read_from_file
-    @games = []
+    @games = GamePersistor.read_from_file
     @genres = GenrePersistor.read_from_file
     @labels = LabelPersistor.read_from_file
-    @authors = []
+    @authors = AuthorPersistor.read_from_file
     @menu_options = {
       '1' => method(:list_all_books),
       '2' => method(:list_all_music_albums),
@@ -103,5 +105,7 @@ class App
     GenrePersistor.write_to_file(@genres)
     BookPersistor.write_to_file(@books)
     LabelPersistor.write_to_file(@labels)
+    GamePersistor.write_to_file(@games)
+    AuthorPersistor.write_to_file(@authors)
   end
 end

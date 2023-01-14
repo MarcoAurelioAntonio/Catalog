@@ -13,8 +13,8 @@ module GamePersistor
   end
 
   def self.json_to_ruby(json)
-    new_game = Game.new(json['genre'], json['date'], json['author'], json['multiplayer'],
-                                     json['label'])
+    new_game = Game.new(json['last_played_at'], json['multiplayer'], json['publish_date'], json['genre'],
+                        json['author'], json['label'])
     new_game.archived = json['archived']
     new_game
   end
@@ -26,13 +26,13 @@ module GamePersistor
 
   def self.ruby_to_json(game)
     {
-      author: game.author
-      genre: game.genre,
-      label: game.label,
-      publish_date: game.publish_date,
-      multiplayer: game.multiplayer,
-      archived: game.archived,
-      last_played_at: game.last_played_at
+      'author' => game.author,
+      'genre' => game.genre,
+      'label' => game.label,
+      'publish_date' => game.publish_date,
+      'multiplayer' => game.multiplayer,
+      'archived' => game.archived,
+      'last_played_at' => game.last_played_at
     }
   end
 end
