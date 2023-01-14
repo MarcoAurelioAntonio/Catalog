@@ -1,4 +1,6 @@
-require './src/classes/music_albums/manage_music_album'
+require './src/classes/music_album/manage_music_album'
+require './data/persistors/genre_persistor'
+require './data/persistors/music_album_persistor'
 require './src/classes/book/book'
 require './data/persistors/book_persistor'
 require './data/persistors/label_persistor'
@@ -6,9 +8,9 @@ require './data/persistors/label_persistor'
 class App
   def initialize
     @books = BookPersistor.read_from_file
-    @music_albums = []
+    @music_albums = MusicAlbumPersistor.read_from_file
     @games = []
-    @genres = []
+    @genres = GenrePersistor.read_from_file
     @labels = LabelPersistor.read_from_file
     @authors = []
     @menu_options = {
@@ -38,9 +40,9 @@ class App
       run
     elsif option == '0'
       save_data
-      puts 'Thank you for using this app!'
+      puts "\nThank you for using this app!\n\n"
     else
-      puts 'That is not a valid option'
+      puts "\nThat is not a valid option\n\n"
       run
     end
   end
@@ -90,8 +92,9 @@ class App
   end
 
   def save_data
-    # GenrePersistor.write_to_file(@genres)
     # Call other persistors
+    MusicAlbumPersistor.write_to_file(@music_albums)
+    GenrePersistor.write_to_file(@genres)
     BookPersistor.write_to_file(@books)
     LabelPersistor.write_to_file(@labels)
   end
