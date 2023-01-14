@@ -1,5 +1,5 @@
-require './src/classes/music_albums/music_album'
-require './src/classes/music_albums/genre'
+require_relative './music_album'
+require_relative '../genre/genre'
 
 class ManageMusicAlbum
   def self.add_music_album(music_albums, genres)
@@ -13,7 +13,7 @@ class ManageMusicAlbum
     print 'Enter publish date (YYYY-MM-DD):'
     date = gets.chomp.to_s
     print 'Is on spotify? (y/n):'
-    on_spotify = gets.chomp.to_s
+    on_spotify = gets.chomp
     on_spotify = on_spotify == 'y'
     music_album = MusicAlbum.new(on_spotify, date, genre, author, label)
     validate_genre(genre, genres, music_album)
