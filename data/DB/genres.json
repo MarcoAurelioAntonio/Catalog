@@ -40,6 +40,14 @@
       {
         "item_id": 326,
         "item_class": "MusicAlbum"
+      },
+      {
+        "item_id": 140,
+        "item_class": "MusicAlbum"
+      },
+      {
+        "item_id": 520,
+        "item_class": "MusicAlbum"
       }
     ]
   }

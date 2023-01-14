@@ -186,6 +186,14 @@
         {
           "item_id": 326,
           "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 140,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 520,
+          "item_class": "MusicAlbum"
         }
       ]
     },
@@ -211,6 +219,14 @@
         },
         {
           "item_id": 326,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 140,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 520,
           "item_class": "MusicAlbum"
         }
       ]
@@ -238,11 +254,87 @@
         {
           "item_id": 326,
           "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 140,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 520,
+          "item_class": "MusicAlbum"
         }
       ]
     },
     "author": "e",
     "label": "e",
+    "publish_date": "2022-02-02",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 140,
+    "genre": {
+      "id": 486,
+      "genre": "y",
+      "items": [
+        {
+          "item_id": 302,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 629,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 326,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 140,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 520,
+          "item_class": "MusicAlbum"
+        }
+      ]
+    },
+    "author": "a",
+    "label": "t",
+    "publish_date": "2022-02-02",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 520,
+    "genre": {
+      "id": 486,
+      "genre": "y",
+      "items": [
+        {
+          "item_id": 302,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 629,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 326,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 140,
+          "item_class": "MusicAlbum"
+        },
+        {
+          "item_id": 520,
+          "item_class": "MusicAlbum"
+        }
+      ]
+    },
+    "author": "t",
+    "label": "t",
     "publish_date": "2022-02-02",
     "archived": false,
     "on_spotify": false

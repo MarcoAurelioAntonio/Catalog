@@ -25,7 +25,7 @@ class App
       '8' => method(:add_music_album),
       '9' => method(:add_game)
     }
-    ItemPersistor.deserialize_items(@genres, @music_albums)
+    ItemPersistor.deserialize_items_all(@genres, @music_albums, @books, @games)
   end
 
   def run
