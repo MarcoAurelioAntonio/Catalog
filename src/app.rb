@@ -1,6 +1,6 @@
 require './src/classes/music_albums/manage_music_album'
-require './classes/game/manage_game'
-require './classes/game/game'
+require './src/classes/game/manage_game'
+require './src/classes/game/game'
 require './src/classes/book/book'
 
 class App
