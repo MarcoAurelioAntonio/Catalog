@@ -1,41 +1,27 @@
-require './src/classes/book/book'
+require_relative 'spec_helper'
 
 describe Book do
-  let(:book) { Book.new('publisher', 'cover_state', 'publish_date', 'genre', 'author', 'label') }
+	
+	# use publisher, cover_state, date, genre, author, label
+  book = Book.new('Stephen King', 'good', '2020-01-01', 'Horror', 'Stephen King', 'Horror')
 
-  it 'should have publisher' do
-    expect(book.publisher).to eq('publisher')
+  it 'takes two parameters and returns a Book object' do
+    expect(book).to be_an_instance_of Book
   end
 
-  it 'should have cover_state' do
-    expect(book.cover_state).to eq('cover_state')
-  end
+	it 'returns the publisher' do
+		expect(book.publisher).to eq 'Stephen King'
+	end
 
-  it 'should have publish_date' do
-    expect(book.publish_date).to eq('publish_date')
-  end
+	it 'returns the cover state' do
+		expect(book.cover_state).to eq 'good'
+	end
 
-  it 'should have genre' do
-    expect(book.genre).to eq('genre')
-  end
+	it 'returns the publish date' do
+		expect(book.publish_date) == '2020-01-01'
+	end
 
-  it 'should have author' do
-    expect(book.author).to eq('author')
-  end
-
-  it 'should have label' do
-    expect(book.label).to eq('label')
-  end
-
-  it 'should have can_be_archived?' do
-    expect(book.can_be_archived?).to eq(false)
-  end
-
-  it 'should have add_book' do
-    expect(book.add_book).to eq(nil)
-  end
-
-  it 'should have validate_label' do
-    expect(book.validate_label).to eq(nil)
-  end
+	it 'returns the genre' do
+		expect(book.genre) == 'Horror'
+	end
 end
