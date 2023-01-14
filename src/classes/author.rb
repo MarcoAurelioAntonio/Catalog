@@ -12,4 +12,11 @@ class Author
     @items.push(item)
     item.author = self
   end
+
+  def self.save_author(author)
+    File.open('author.json', 'a+') do |file|
+      author1 = { author: author }
+      file.write(JSON.generate(author1))
+    end
+  end
 end

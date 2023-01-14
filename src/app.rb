@@ -5,6 +5,7 @@ require './data/persistors/label_persistor'
 require './data/persistors/item_persistor'
 require './src/classes/book'
 require './src/classes/music_album'
+require './src/classes/game'
 
 class App
   def initialize
@@ -63,7 +64,9 @@ class App
   end
 
   def list_all_games
-    puts 'list all games'
+    @games.each_with_index do |game, index|
+      puts "[#{index}]  #{game.label}  #{game.genre}  #{game.publish_date}  #{game.multiplayer}"
+    end
   end
 
   def list_all_genres
@@ -92,7 +95,7 @@ class App
   end
 
   def add_game
-    puts 'add game'
+    Game.add_game(@games)
   end
 
   def save_data

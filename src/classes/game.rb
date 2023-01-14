@@ -1,4 +1,4 @@
-require_relative '../item/item'
+require_relative './item'
 
 class Game < Item
   attr_accessor :last_played_at, :multiplayer
@@ -13,7 +13,7 @@ class Game < Item
     return true if date > 3_652 && @last_played_at < (365 * 2)
   end
 
-  def self.add_game(games, authors)
+  def self.add_game(games)
     puts 'Add a New Game'
     puts 'Enter Genre: '
     genre = gets.chomp.to_s
@@ -35,17 +35,10 @@ class Game < Item
   end
 
   def self.save_game(game)
-      game1 = { 'class' => game.class, 'genre' => game.genre, 'label' => game.label, 'multiplayer' => game.multiplayer,
-                'author' => game.author, 'date' => game.publish_date, 'last_played_at' => game.last_played_at }
-      File.open('./game.json', 'a+') do |file|
+    game1 = { 'class' => game.class, 'genre' => game.genre, 'label' => game.label, 'multiplayer' => game.multiplayer,
+              'author' => game.author, 'date' => game.publish_date, 'last_played_at' => game.last_played_at }
+    File.open('./game.json', 'a+') do |file|
       file.write(game1.to_json)
-    end
-  end
-
-  def self.save_author(author)
-    File.open('author.json', 'a+') do |file|
-      author1 = { author: author }
-      file.write(JSON.generate(author1))
     end
   end
 end
