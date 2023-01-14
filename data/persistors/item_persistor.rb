@@ -4,15 +4,32 @@ require './src/classes/genre'
 require './src/app'
 
 module ItemPersistor
-  SOURCE = './data/DB/genres.json'.freeze
-  # Item components: label, author, genre
+  SOURCE_GENRES = './data/DB/genres.json'.freeze
+  SOURCE_LABELS = './data/DB/labels.json'.freeze
+  SOURCE_AUTHORS = './data/DB/authors.json'.freeze
+
+  # Item component: Referst to label, author, or genre
 
   def self.deserialize_items_all(genres, music_albums, books, games)
-    genres_array = JSON.parse(File.read(SOURCE))
+    source_file = select_source(genres)
+    return [] unless File.exist?(source_file)
+
+    genres_array = JSON.parse(File.read(source_file))
     genres.each do |genre|
       temp_genre = genres_array
         .find { |genres_obj| genres_obj['id'] == genre.id }
       deserialize_item(genre, temp_genre, music_albums, books, games)
+    end
+  end
+
+  def self.select_source(genres)
+    case genres.first.class.to_s
+    when 'Genre'
+      SOURCE_GENRES
+    when 'Label'
+      SOURCE_LABELS
+    else
+      SOURCE_AUTHORS
     end
   end
 

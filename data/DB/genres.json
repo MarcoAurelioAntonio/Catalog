@@ -1,52 +1,18 @@
 [
   {
-    "id": 951,
+    "id": 411,
     "genre": "a",
     "items": [
       {
-        "item_id": 894,
+        "item_id": 828,
         "item_class": "MusicAlbum"
       },
       {
-        "item_id": 16,
+        "item_id": 429,
         "item_class": "MusicAlbum"
       },
       {
-        "item_id": 225,
-        "item_class": "MusicAlbum"
-      },
-      {
-        "item_id": 859,
-        "item_class": "MusicAlbum"
-      },
-      {
-        "item_id": 958,
-        "item_class": "MusicAlbum"
-      }
-    ]
-  },
-  {
-    "id": 486,
-    "genre": "y",
-    "items": [
-      {
-        "item_id": 302,
-        "item_class": "MusicAlbum"
-      },
-      {
-        "item_id": 629,
-        "item_class": "MusicAlbum"
-      },
-      {
-        "item_id": 326,
-        "item_class": "MusicAlbum"
-      },
-      {
-        "item_id": 140,
-        "item_class": "MusicAlbum"
-      },
-      {
-        "item_id": 520,
+        "item_id": 335,
         "item_class": "MusicAlbum"
       }
     ]

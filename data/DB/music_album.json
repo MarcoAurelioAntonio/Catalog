@@ -1,28 +1,20 @@
 [
   {
-    "id": 894,
+    "id": 828,
     "genre": {
-      "id": 951,
+      "id": 411,
       "genre": "a",
       "items": [
         {
-          "item_id": 894,
+          "item_id": 828,
           "item_class": "MusicAlbum"
         },
         {
-          "item_id": 16,
+          "item_id": 429,
           "item_class": "MusicAlbum"
         },
         {
-          "item_id": 225,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 859,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 958,
+          "item_id": 335,
           "item_class": "MusicAlbum"
         }
       ]
@@ -31,310 +23,56 @@
     "label": "a",
     "publish_date": "2022-02-02",
     "archived": false,
-    "on_spotify": false
-  },
-  {
-    "id": 16,
-    "genre": {
-      "id": 951,
-      "genre": "a",
-      "items": [
-        {
-          "item_id": 894,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 16,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 225,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 859,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 958,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
-    "author": "y",
-    "label": "y",
-    "publish_date": "2023-03-03",
-    "archived": false,
     "on_spotify": true
   },
   {
-    "id": 225,
+    "id": 429,
     "genre": {
-      "id": 951,
+      "id": 411,
       "genre": "a",
       "items": [
         {
-          "item_id": 894,
+          "item_id": 828,
           "item_class": "MusicAlbum"
         },
         {
-          "item_id": 16,
+          "item_id": 429,
           "item_class": "MusicAlbum"
         },
         {
-          "item_id": 225,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 859,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 958,
+          "item_id": 335,
           "item_class": "MusicAlbum"
         }
       ]
     },
-    "author": "06/06/2026",
-    "label": "a",
-    "publish_date": "2026-06-06",
+    "author": "g",
+    "label": "f",
+    "publish_date": "2022-02-02",
     "archived": false,
-    "on_spotify": true
+    "on_spotify": false
   },
   {
-    "id": 859,
+    "id": 335,
     "genre": {
-      "id": 951,
+      "id": 411,
       "genre": "a",
       "items": [
         {
-          "item_id": 894,
+          "item_id": 828,
           "item_class": "MusicAlbum"
         },
         {
-          "item_id": 16,
+          "item_id": 429,
           "item_class": "MusicAlbum"
         },
         {
-          "item_id": 225,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 859,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 958,
+          "item_id": 335,
           "item_class": "MusicAlbum"
         }
       ]
     },
-    "author": "a",
-    "label": "h",
-    "publish_date": "2025-05-05",
-    "archived": false,
-    "on_spotify": false
-  },
-  {
-    "id": 958,
-    "genre": {
-      "id": 951,
-      "genre": "a",
-      "items": [
-        {
-          "item_id": 894,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 16,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 225,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 859,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 958,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
-    "author": "d",
-    "label": "g",
-    "publish_date": "2022-02-02",
-    "archived": false,
-    "on_spotify": true
-  },
-  {
-    "id": 302,
-    "genre": {
-      "id": 486,
-      "genre": "y",
-      "items": [
-        {
-          "item_id": 302,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 629,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 326,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 140,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 520,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
-    "author": "y",
-    "label": "y",
-    "publish_date": "2022-02-02",
-    "archived": false,
-    "on_spotify": true
-  },
-  {
-    "id": 629,
-    "genre": {
-      "id": 486,
-      "genre": "y",
-      "items": [
-        {
-          "item_id": 302,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 629,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 326,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 140,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 520,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
-    "author": "d",
-    "label": "gh",
-    "publish_date": "2022-02-02",
-    "archived": false,
-    "on_spotify": false
-  },
-  {
-    "id": 326,
-    "genre": {
-      "id": 486,
-      "genre": "y",
-      "items": [
-        {
-          "item_id": 302,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 629,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 326,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 140,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 520,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
-    "author": "e",
-    "label": "e",
-    "publish_date": "2022-02-02",
-    "archived": false,
-    "on_spotify": false
-  },
-  {
-    "id": 140,
-    "genre": {
-      "id": 486,
-      "genre": "y",
-      "items": [
-        {
-          "item_id": 302,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 629,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 326,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 140,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 520,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
-    "author": "a",
-    "label": "t",
-    "publish_date": "2022-02-02",
-    "archived": false,
-    "on_spotify": false
-  },
-  {
-    "id": 520,
-    "genre": {
-      "id": 486,
-      "genre": "y",
-      "items": [
-        {
-          "item_id": 302,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 629,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 326,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 140,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 520,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
-    "author": "t",
-    "label": "t",
+    "author": "yh",
+    "label": "ter",
     "publish_date": "2022-02-02",
     "archived": false,
     "on_spotify": false
