@@ -1,5 +1,5 @@
 require 'json'
-require './src/classes/book/book'
+require './src/classes/book'
 
 module BookPersistor
   SOURCE = './data/DB/books.json'.freeze

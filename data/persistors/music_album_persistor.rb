@@ -1,5 +1,5 @@
 require 'json'
-require './src/classes/music_album/music_album'
+require './src/classes/music_album'
 require_relative './genre_persistor'
 
 module MusicAlbumPersistor

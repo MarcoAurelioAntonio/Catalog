@@ -1,7 +1,18 @@
-require_relative './music_album'
-require_relative '../genre/genre'
+require_relative './item'
+require_relative './genre'
 
-class ManageMusicAlbum
+class MusicAlbum < Item
+  attr_accessor :on_spotify
+
+  def initialize(on_spotify, *args)
+    super(*args)
+    @on_spotify = on_spotify
+  end
+
+  def can_be_archived?
+    (Date.today - @publish_date) > 3652 && @on_spotify
+  end
+
   def self.add_music_album(music_albums, genres)
     puts 'ADD A NEW MUSIC ALBUM'
     print 'Enter genre: '
@@ -16,19 +27,9 @@ class ManageMusicAlbum
     on_spotify = gets.chomp
     on_spotify = on_spotify == 'y'
     music_album = MusicAlbum.new(on_spotify, date, genre, author, label)
-    validate_genre(genre, genres, music_album)
+    Genre.validate_genre(genre, genres, music_album)
     music_album.move_to_archive
     music_albums << music_album
     puts 'Music album added'
-  end
-
-  def self.validate_genre(genre, genres, item)
-    if genres.select { |genre_item| genre_item.genre == genre }.empty?
-      new_genre = Genre.new(genre)
-      new_genre.add_item(item)
-      genres << new_genre
-    else
-      genres.select { |genre_item| genre_item.genre == genre }[0].add_item(item)
-    end
   end
 end
