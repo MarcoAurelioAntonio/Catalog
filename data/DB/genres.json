@@ -1,9 +1,28 @@
 [
   {
-    "id": 586,
+    "id": 411,
     "genre": "a",
     "items": [
-      "#<MusicAlbum:0x000001c97df25948>"
+      {
+        "item_id": 828,
+        "item_class": "MusicAlbum"
+      },
+      {
+        "item_id": 429,
+        "item_class": "MusicAlbum"
+      },
+      {
+        "item_id": 335,
+        "item_class": "MusicAlbum"
+      },
+      {
+        "item_id": 396,
+        "item_class": "MusicAlbum"
+      },
+      {
+        "item_id": 348,
+        "item_class": "MusicAlbum"
+      }
     ]
   }
 ]

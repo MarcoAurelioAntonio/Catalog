@@ -1,18 +1,19 @@
-require './src/classes/music_album/manage_music_album'
 require './data/persistors/genre_persistor'
 require './data/persistors/music_album_persistor'
-require './src/classes/book/book'
 require './data/persistors/book_persistor'
 require './data/persistors/label_persistor'
+require './data/persistors/item_persistor'
+require './src/classes/book'
+require './src/classes/music_album'
 
 class App
   def initialize
-    @books = BookPersistor.read_from_file
-    @music_albums = MusicAlbumPersistor.read_from_file
-    @games = []
     @genres = GenrePersistor.read_from_file
     @labels = LabelPersistor.read_from_file
     @authors = []
+    @music_albums = MusicAlbumPersistor.read_from_file(@genres)
+    @books = BookPersistor.read_from_file
+    @games = []
     @menu_options = {
       '1' => method(:list_all_books),
       '2' => method(:list_all_music_albums),
@@ -24,6 +25,8 @@ class App
       '8' => method(:add_music_album),
       '9' => method(:add_game)
     }
+    ItemPersistor.read_from_file(@genres, @music_albums, @books, @games)
+    # Add ItemPersistor.read_from_file for @labels and @authors
   end
 
   def run
@@ -67,6 +70,7 @@ class App
     @genres.each_with_index do |genre, index|
       puts "(#{index + 1}) - #{genre.genre}"
     end
+    puts @genres.inspect
   end
 
   def list_all_labels
@@ -84,7 +88,7 @@ class App
   end
 
   def add_music_album
-    ManageMusicAlbum.add_music_album(@music_albums, @genres)
+    MusicAlbum.add_music_album(@music_albums, @genres)
   end
 
   def add_game
