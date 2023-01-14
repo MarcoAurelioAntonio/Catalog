@@ -4,6 +4,7 @@ require './data/persistors/music_album_persistor'
 require './src/classes/book/book'
 require './data/persistors/book_persistor'
 require './data/persistors/label_persistor'
+require './data/persistors/item_persistor'
 
 class App
   def initialize
@@ -24,6 +25,7 @@ class App
       '8' => method(:add_music_album),
       '9' => method(:add_game)
     }
+    ItemPersistor.json_to_ruby(@genres, @music_albums)
   end
 
   def run

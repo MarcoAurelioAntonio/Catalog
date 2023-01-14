@@ -15,8 +15,6 @@ module GenrePersistor
   def self.json_to_ruby(json)
     new_genre = Genre.new(json['genre'])
     new_genre.id = json['id']
-    # new_genre.items = json['items'].map { |item| ItemPersistor.json_to_ruby(item) }
-    new_genre.items = json['items']
     new_genre
   end
 

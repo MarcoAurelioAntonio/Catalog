@@ -1,20 +1,50 @@
 [
   {
-    "id": 266,
+    "id": 670,
     "genre": {
-      "id": 179,
+      "id": 477,
+      "genre": "d",
+      "items": [
+
+      ]
+    },
+    "author": "d",
+    "label": "d",
+    "publish_date": "2023-03-05",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 141,
+    "genre": {
+      "id": 955,
+      "genre": "t",
+      "items": [
+
+      ]
+    },
+    "author": "t",
+    "label": "t",
+    "publish_date": "2000-09-09",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 767,
+    "genre": {
+      "id": 955,
       "genre": "t",
       "items": [
         {
-          "item_id": 266,
+          "item_id": 767,
           "item_class": "MusicAlbum"
         }
       ]
     },
     "author": "t",
     "label": "t",
-    "publish_date": "2022-03-02",
+    "publish_date": "2020-02-05",
     "archived": false,
-    "on_spotify": true
+    "on_spotify": false
   }
 ]
