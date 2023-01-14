@@ -8,12 +8,12 @@ require './src/classes/music_album'
 
 class App
   def initialize
-    @books = BookPersistor.read_from_file
-    @music_albums = MusicAlbumPersistor.read_from_file
-    @games = []
     @genres = GenrePersistor.read_from_file
     @labels = LabelPersistor.read_from_file
     @authors = []
+    @music_albums = MusicAlbumPersistor.read_from_file(@genres)
+    @books = BookPersistor.read_from_file
+    @games = []
     @menu_options = {
       '1' => method(:list_all_books),
       '2' => method(:list_all_music_albums),

@@ -14,6 +14,10 @@
       {
         "item_id": 335,
         "item_class": "MusicAlbum"
+      },
+      {
+        "item_id": 396,
+        "item_class": "MusicAlbum"
       }
     ]
   }

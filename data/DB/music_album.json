@@ -1,24 +1,7 @@
 [
   {
     "id": 828,
-    "genre": {
-      "id": 411,
-      "genre": "a",
-      "items": [
-        {
-          "item_id": 828,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 429,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 335,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
+    "genre_id": 411,
     "author": "a",
     "label": "a",
     "publish_date": "2022-02-02",
@@ -27,24 +10,7 @@
   },
   {
     "id": 429,
-    "genre": {
-      "id": 411,
-      "genre": "a",
-      "items": [
-        {
-          "item_id": 828,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 429,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 335,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
+    "genre_id": 411,
     "author": "g",
     "label": "f",
     "publish_date": "2022-02-02",
@@ -53,27 +19,19 @@
   },
   {
     "id": 335,
-    "genre": {
-      "id": 411,
-      "genre": "a",
-      "items": [
-        {
-          "item_id": 828,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 429,
-          "item_class": "MusicAlbum"
-        },
-        {
-          "item_id": 335,
-          "item_class": "MusicAlbum"
-        }
-      ]
-    },
+    "genre_id": 411,
     "author": "yh",
     "label": "ter",
     "publish_date": "2022-02-02",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 396,
+    "genre_id": 411,
+    "author": "yte",
+    "label": "tewr",
+    "publish_date": "2022-02-20",
     "archived": false,
     "on_spotify": false
   }
