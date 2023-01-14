@@ -4,11 +4,11 @@ require './src/classes/book'
 module BookPersistor
   SOURCE = './data/DB/books.json'.freeze
 
-  def self.read_from_file
+  def self.read_from_file(labels)
     return [] unless File.exist?(SOURCE)
 
     deserialized_books = JSON.parse(File.read(SOURCE))
-    deserialized_books.map { |book| json_to_book(book) }
+    deserialized_books.map { |book| json_to_book(book, labels) }
   end
 
   def self.write_to_file(books)
@@ -24,11 +24,14 @@ module BookPersistor
       'publish_date' => book.publish_date,
       'genre' => book.genre,
       'author' => book.author,
-      'label' => book.label
+      'label' => book.label.id
     }
   end
 
-  def self.json_to_book(json)
-    Book.new(json['publisher'], json['cover_state'], json['publish_date'], json['genre'], json['author'], json['label'])
+  def self.json_to_book(json, labels)
+    Book.new(json['publisher'], json['cover_state'], json['publish_date'], json['genre'], json['author'], 'label')
+    new_book.archived = json['archived']
+    new_book.label = labels.find { |label| label.id == json['label_id'] }
+    new_book
   end
 end
