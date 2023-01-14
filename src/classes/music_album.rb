@@ -30,7 +30,6 @@ class MusicAlbum < Item
     Genre.validate_genre(genre, genres, music_album)
     music_album.move_to_archive
     music_albums << music_album
-    puts genres.inspect
     puts 'Music album added'
   end
 end
