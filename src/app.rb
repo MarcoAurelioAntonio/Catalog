@@ -2,14 +2,16 @@ require './src/classes/music_album/manage_music_album'
 require './data/persistors/genre_persistor'
 require './data/persistors/music_album_persistor'
 require './src/classes/book/book'
+require './data/persistors/book_persistor'
+require './data/persistors/label_persistor'
 
 class App
   def initialize
-    @books = []
+    @books = BookPersistor.read_from_file
     @music_albums = MusicAlbumPersistor.read_from_file
     @games = []
     @genres = GenrePersistor.read_from_file
-    @labels = []
+    @labels = LabelPersistor.read_from_file
     @authors = []
     @menu_options = {
       '1' => method(:list_all_books),
@@ -46,7 +48,9 @@ class App
   end
 
   def list_all_books
-    puts 'list all books'
+    @books.each_with_index do |book, index|
+      puts "(#{index + 1}) - #{book.genre} - #{book.author} - #{book.label}"
+    end
   end
 
   def list_all_music_albums
@@ -66,7 +70,9 @@ class App
   end
 
   def list_all_labels
-    puts 'list all labels'
+    @labels.each_with_index do |label, index|
+      puts "(#{index + 1}) - #{label}"
+    end
   end
 
   def list_all_authors
@@ -86,8 +92,10 @@ class App
   end
 
   def save_data
-    GenrePersistor.write_to_file(@genres)
-    MusicAlbumPersistor.write_to_file(@music_albums)
     # Call other persistors
+    MusicAlbumPersistor.write_to_file(@music_albums)
+    GenrePersistor.write_to_file(@genres)
+    BookPersistor.write_to_file(@books)
+    LabelPersistor.write_to_file(@labels)
   end
 end
