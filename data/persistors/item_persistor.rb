@@ -1,19 +1,14 @@
 require 'json'
-require './genre_persistor'
-require './music_album_persistor'
+require_relative './music_album_persistor'
 # require persistors for other classes
 
 module ItemPersistor
-  def self.deserialize_all_items(items)
-    items.map { |item| json_to_ruby(item) }
-  end
-
   def self.json_to_ruby(json)
     # Change this to deserialize items using an appropriate method
     if json['on_spotify']
       MusicAlbumPersistor.json_to_ruby(json)
     # Add cases for other classes
-    # Use an attribute that is unique to each class
+    # Use an attribute that is unique to each class for elsif conditionals
     elsif json['unique book attribute']
       puts 'Implement Book serialization'
     elsif json['unique game attribute']
@@ -23,22 +18,17 @@ module ItemPersistor
     end
   end
 
-  def self.serialize_all_items(items)
-    items.map { |item| ruby_to_json(item) }
-  end
-
-  def self.ruby_to_json(_json)
+  def self.ruby_to_json(item)
     # Change this to serialize items using an appropriate method
-    case item
-    when MusicAlbum
-      MusicAlbumPersistor.ruby_to_json(item)
+    return unless item.is_a?(MusicAlbum)
+
+    MusicAlbumPersistor.ruby_to_json(item)
     # Add cases for other classes
-    when Book
-      puts 'Implement Book serialization'
-    when Game
-      puts 'Implement Game serialization'
-    else
-      raise 'Invalid item type'
-    end
+    # elsif item.is_a?(Book)
+    #   puts 'Implement Book serialization'
+    # elsif item.is_a?(Game)
+    #   puts 'Implement Game serialization'
+    # else
+    #   raise 'Invalid item type'
   end
 end

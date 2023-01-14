@@ -1,5 +1,6 @@
 require 'json'
 require './src/classes/genre/genre'
+require './data/persistors/item_persistor'
 
 module GenrePersistor
   SOURCE = './data/DB/genres.json'.freeze
@@ -14,8 +15,7 @@ module GenrePersistor
   def self.json_to_ruby(json)
     new_genre = Genre.new(json['genre'])
     new_genre.id = json['id']
-    # Change this to add items (books, music albums, movies)
-    new_genre.items = json['items']
+    new_genre.items = ItemPersistor.deserialize_all_items(json['items'])
     new_genre
   end
 
@@ -28,8 +28,8 @@ module GenrePersistor
     {
       id: genre_item.id,
       genre: genre_item.genre,
-      # Change this to add serialized items using an appropriate method
-      items: 'Pending implementation of items serialization'
+      # items: genre_item.items.map { |item| ItemPersistor.ruby_to_json(item) }
+      items: genre_item.items
     }
   end
 end
