@@ -23,7 +23,7 @@ class ManageGame
     game.author = author
     game.move_to_archive
     gam << game
-    authors.push(create_author)
+    authors << create_author
     puts 'Game Successfully Added'
   end
 end

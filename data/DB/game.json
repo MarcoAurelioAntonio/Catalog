@@ -16,5 +16,32 @@
     "multiplayer": "true",
     "archived": false,
     "last_played_at": "2018-06-29"
+  },
+  {
+    "author": "Epic Games",
+    "genre": "Shooter",
+    "label": "Fortnite",
+    "publish_date": "2026-02-23",
+    "multiplayer": "true",
+    "archived": false,
+    "last_played_at": "2027-12-10"
+  },
+  {
+    "author": "fgfdgf",
+    "genre": "fgfsgf",
+    "label": "fdgfgfs",
+    "publish_date": "2006-10-10",
+    "multiplayer": "sdfdsf",
+    "archived": true,
+    "last_played_at": "2007-10-01"
+  },
+  {
+    "author": "Atlas",
+    "genre": "Racing",
+    "label": "Forza",
+    "publish_date": "2028-09-10",
+    "multiplayer": "true",
+    "archived": false,
+    "last_played_at": "2030-12-12"
   }
 ]

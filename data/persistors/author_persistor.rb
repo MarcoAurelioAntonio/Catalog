@@ -1,5 +1,5 @@
 require 'json'
-require_relative '../../src/classes/author/author'
+require './src/classes/author/author'
 
 module AuthorPersistor
   SOURCE = './data/DB/author.json'.freeze
@@ -8,7 +8,7 @@ module AuthorPersistor
     return [] unless File.exist?(SOURCE)
 
     deserialized_authors = JSON.parse(File.read(SOURCE))
-    deserialized_authors.map { |author| json_to_label(author) }
+    deserialized_authors.map { |author| json_to_author(author) }
   end
 
   def self.write_to_file(authors)
