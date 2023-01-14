@@ -35,10 +35,7 @@
       "id": 955,
       "genre": "t",
       "items": [
-        {
-          "item_id": 767,
-          "item_class": "MusicAlbum"
-        }
+
       ]
     },
     "author": "t",
@@ -46,5 +43,23 @@
     "publish_date": "2020-02-05",
     "archived": false,
     "on_spotify": false
+  },
+  {
+    "id": 505,
+    "genre": {
+      "id": 554,
+      "genre": "y",
+      "items": [
+        {
+          "item_id": 505,
+          "item_class": "MusicAlbum"
+        }
+      ]
+    },
+    "author": "y",
+    "label": "y",
+    "publish_date": "2022-02-02",
+    "archived": false,
+    "on_spotify": true
   }
 ]
