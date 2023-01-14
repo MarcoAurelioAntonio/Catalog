@@ -1,6 +1,8 @@
 require_relative '../item/item'
 require_relative '../book/label'
 require 'date'
+require './data/persistors/book_persistor'
+require './data/persistors/label_persistor'
 
 class Book < Item
   attr_accessor :publisher, :cover_state
@@ -12,7 +14,7 @@ class Book < Item
   end
 
   def can_be_archived?
-    (Date.today - @publish_date) > 3652 or @cover_state == 'bad'
+    (Date.today - Date.parse(@publish_date)) > 3652 or @cover_state == 'bad'
   end
 
   def self.add_book(books, labels)
@@ -30,12 +32,11 @@ class Book < Item
     print 'Enter label:'
     label = gets.chomp.to_s
     book = Book.new(publisher, cover_state, date, genre, author, label)
-    book.author = author
-    book.label = label
-    book.genre = genre
     book.publish_date = date
     validate_label(labels, book)
+    book.move_to_archive
     books << book
+    BookPersistor.write_to_file(books)
     puts 'Book added'
   end
 
@@ -51,9 +52,6 @@ class Book < Item
     else
       labels.select { |book_label| book_label.title == title && book_label.color == color }[0].add_item(book)
     end
+    LabelPersistor.write_to_file(labels)
   end
 end
-
-# oobjt = Book.new('publisher', 'good', '2019-01-01', 'genre', 'author', 'label')
-# puts oobjt.inspect
-# puts oobjt.can_be_archived?

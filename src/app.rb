@@ -1,13 +1,15 @@
 require './src/classes/music_albums/manage_music_album'
 require './src/classes/book/book'
+require './data/persistors/book_persistor'
+require './data/persistors/label_persistor'
 
 class App
   def initialize
-    @books = []
+    @books = BookPersistor.read_from_file
     @music_albums = []
     @games = []
     @genres = []
-    @labels = []
+    @labels = LabelPersistor.read_from_file
     @authors = []
     @menu_options = {
       '1' => method(:list_all_books),
@@ -35,6 +37,7 @@ class App
       puts ''
       run
     elsif option == '0'
+      save_data
       puts 'Thank you for using this app!'
     else
       puts 'That is not a valid option'
@@ -43,7 +46,9 @@ class App
   end
 
   def list_all_books
-    puts 'list all books'
+    @books.each_with_index do |book, index|
+      puts "(#{index + 1}) - #{book.genre} - #{book.author} - #{book.label}"
+    end
   end
 
   def list_all_music_albums
@@ -63,7 +68,9 @@ class App
   end
 
   def list_all_labels
-    puts 'list all labels'
+    @labels.each_with_index do |label, index|
+      puts "(#{index + 1}) - #{label}"
+    end
   end
 
   def list_all_authors
@@ -80,5 +87,12 @@ class App
 
   def add_game
     puts 'add game'
+  end
+
+  def save_data
+    # GenrePersistor.write_to_file(@genres)
+    # Call other persistors
+    BookPersistor.write_to_file(@books)
+    LabelPersistor.write_to_file(@labels)
   end
 end
