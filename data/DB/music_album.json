@@ -1,16 +1,19 @@
 [
   {
-    "id": 814,
+    "id": 266,
     "genre": {
-      "id": 586,
-      "genre": "a",
+      "id": 179,
+      "genre": "t",
       "items": [
-        "#<MusicAlbum:0x000001c97df25948>"
+        {
+          "item_id": 266,
+          "item_class": "MusicAlbum"
+        }
       ]
     },
-    "author": "a",
-    "label": "a",
-    "publish_date": "2022-02-02",
+    "author": "t",
+    "label": "t",
+    "publish_date": "2022-03-02",
     "archived": false,
     "on_spotify": true
   }

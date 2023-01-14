@@ -18,18 +18,8 @@ module ItemPersistor
     end
   end
 
-  def self.ruby_to_json(item)
+  def self.ruby_to_json(_item)
     # Change this to serialize items using an appropriate method
-    case item
-    when MusicAlbum
-      MusicAlbumPersistor.ruby_to_json(item)
-    # Add cases for other classes
-    when Book
-      puts 'Implement Book serialization'
-    when Game
-      puts 'Implement Game serialization'
-    else
-      raise 'Invalid item type'
-    end
+    'item.to_json'
   end
 end
