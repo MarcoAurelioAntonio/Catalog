@@ -1,79 +1,106 @@
 [
   {
-    "id": 670,
+    "id": 19,
     "genre": {
-      "id": 477,
-      "genre": "d",
+      "id": 828,
+      "genre": "t",
       "items": [
 
       ]
     },
     "author": "d",
+    "label": "s",
+    "publish_date": "2022-02-02",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 419,
+    "genre": {
+      "id": 828,
+      "genre": "t",
+      "items": [
+
+      ]
+    },
+    "author": "a",
     "label": "d",
-    "publish_date": "2023-03-05",
+    "publish_date": "2020-02-02",
     "archived": false,
     "on_spotify": false
   },
   {
-    "id": 141,
+    "id": 45,
     "genre": {
-      "id": 955,
-      "genre": "t",
+      "id": 804,
+      "genre": "8",
       "items": [
 
       ]
     },
     "author": "t",
-    "label": "t",
-    "publish_date": "2000-09-09",
-    "archived": false,
-    "on_spotify": false
-  },
-  {
-    "id": 767,
-    "genre": {
-      "id": 955,
-      "genre": "t",
-      "items": [
-
-      ]
-    },
-    "author": "t",
-    "label": "t",
-    "publish_date": "2020-02-05",
-    "archived": false,
-    "on_spotify": false
-  },
-  {
-    "id": 505,
-    "genre": {
-      "id": 554,
-      "genre": "y",
-      "items": [
-
-      ]
-    },
-    "author": "y",
-    "label": "y",
+    "label": "d",
     "publish_date": "2022-02-02",
     "archived": false,
-    "on_spotify": true
+    "on_spotify": false
   },
   {
-    "id": 98,
+    "id": 162,
     "genre": {
-      "id": 955,
+      "id": 828,
       "genre": "t",
       "items": [
-        {
-          "item_id": 98,
-          "item_class": "MusicAlbum"
-        }
+
       ]
     },
-    "author": "t",
-    "label": "t",
+    "author": "d",
+    "label": "s",
+    "publish_date": "2020-02-02",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 423,
+    "genre": {
+      "id": 828,
+      "genre": "t",
+      "items": [
+
+      ]
+    },
+    "author": "da",
+    "label": "d",
+    "publish_date": "2020-02-20",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 229,
+    "genre": {
+      "id": 828,
+      "genre": "t",
+      "items": [
+
+      ]
+    },
+    "author": "d",
+    "label": "a",
     "publish_date": "2022-02-02",
+    "archived": false,
+    "on_spotify": false
+  },
+  {
+    "id": 842,
+    "genre": {
+      "id": 828,
+      "genre": "t",
+      "items": [
+
+      ]
+    },
+    "author": "a",
+    "label": "h",
+    "publish_date": "2022-02-20",
     "archived": false,
     "on_spotify": true
   }

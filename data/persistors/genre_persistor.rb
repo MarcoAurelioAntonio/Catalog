@@ -27,7 +27,7 @@ module GenrePersistor
     {
       id: genre_item.id,
       genre: genre_item.genre,
-      items: genre_item.items.map { |item| { item_id: item.id, item_class: item.class.to_s } }
+      items: genre_item.items.map { |item| ItemPersistor.ruby_to_json(item) }
     }
   end
 end

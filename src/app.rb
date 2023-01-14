@@ -25,7 +25,6 @@ class App
       '8' => method(:add_music_album),
       '9' => method(:add_game)
     }
-    ItemPersistor.json_to_ruby(@genres, @music_albums)
   end
 
   def run
@@ -69,6 +68,7 @@ class App
     @genres.each_with_index do |genre, index|
       puts "(#{index + 1}) - #{genre.genre}"
     end
+    puts @genres.inspect
   end
 
   def list_all_labels
