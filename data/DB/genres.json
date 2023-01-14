@@ -10,17 +10,17 @@
     "id": 955,
     "genre": "t",
     "items": [
-
+      {
+        "item_id": 98,
+        "item_class": "MusicAlbum"
+      }
     ]
   },
   {
     "id": 554,
     "genre": "y",
     "items": [
-      {
-        "item_id": 505,
-        "item_class": "MusicAlbum"
-      }
+
     ]
   }
 ]

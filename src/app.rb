@@ -1,10 +1,10 @@
-require './src/classes/music_album/manage_music_album'
 require './data/persistors/genre_persistor'
 require './data/persistors/music_album_persistor'
-require './src/classes/book/book'
 require './data/persistors/book_persistor'
 require './data/persistors/label_persistor'
 require './data/persistors/item_persistor'
+require './src/classes/book'
+require './src/classes/music_album'
 
 class App
   def initialize

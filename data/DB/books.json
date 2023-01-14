@@ -1,11 +1,20 @@
 [
   {
-    "id": 876,
+    "id": 560,
     "publisher": "d",
     "cover_state": "good",
     "publish_date": "2020-02-02",
     "genre": "f",
     "author": "e",
     "label": "#<Label:0x000001c284a84100>"
+  },
+  {
+    "id": 634,
+    "publisher": "a",
+    "cover_state": "a",
+    "publish_date": "02/02/2022",
+    "genre": "d",
+    "author": "d",
+    "label": "#<Label:0x0000018b52b3b760>"
   }
 ]

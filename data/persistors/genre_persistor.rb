@@ -1,5 +1,5 @@
 require 'json'
-require './src/classes/genre/genre'
+require './src/classes/genre'
 require './data/persistors/item_persistor'
 
 module GenrePersistor

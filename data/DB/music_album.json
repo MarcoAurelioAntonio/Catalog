@@ -50,14 +50,29 @@
       "id": 554,
       "genre": "y",
       "items": [
-        {
-          "item_id": 505,
-          "item_class": "MusicAlbum"
-        }
+
       ]
     },
     "author": "y",
     "label": "y",
+    "publish_date": "2022-02-02",
+    "archived": false,
+    "on_spotify": true
+  },
+  {
+    "id": 98,
+    "genre": {
+      "id": 955,
+      "genre": "t",
+      "items": [
+        {
+          "item_id": 98,
+          "item_class": "MusicAlbum"
+        }
+      ]
+    },
+    "author": "t",
+    "label": "t",
     "publish_date": "2022-02-02",
     "archived": false,
     "on_spotify": true
