@@ -25,9 +25,9 @@ module GenrePersistor
 
   def self.ruby_to_json(genre_item)
     {
-      id: genre_item.id,
-      genre: genre_item.genre,
-      items: genre_item.items.map { |item| ItemPersistor.ruby_to_json(item) }
+      'id' => genre_item.id,
+      'genre' => genre_item.genre,
+      'items' => []
     }
   end
 end

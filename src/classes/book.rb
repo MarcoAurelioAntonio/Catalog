@@ -1,8 +1,8 @@
 require_relative './item'
 require_relative './label'
+require_relative './author'
+require_relative './genre'
 require 'date'
-require './data/persistors/book_persistor'
-require './data/persistors/label_persistor'
 
 class Book < Item
   attr_accessor :publisher, :cover_state
@@ -17,8 +17,7 @@ class Book < Item
     (Date.today - Date.parse(@publish_date)) > 3652 or @cover_state == 'bad'
   end
 
-  def self.add_book(books, labels)
-    # puts 'ADD A NEW BOOK'
+  def self.add_book
     print 'Enter publisher: '
     publisher = gets.chomp.to_s
     print 'Enter cover state (good/bad):'
@@ -26,32 +25,18 @@ class Book < Item
     print 'Enter publish date (YYYY-MM-DD):'
     date = gets.chomp.to_s
     print 'Enter genre:'
-    genre = gets.chomp.to_s
-    print 'Enter author:'
-    author = gets.chomp.to_s
-    print 'Enter label:'
-    label = gets.chomp.to_s
+    genre = Genre.new(gets.chomp.to_s)
+    puts 'Enter author'
+    author = Author.input_author
+    puts 'Enter label'
+    label = Label.input_label
     book = Book.new(publisher, cover_state, date, genre, author, label)
     book.publish_date = date
-    validate_label(labels, book)
     book.move_to_archive
-    books << book
-    BookPersistor.write_to_file(books)
+    author.add_item(book)
+    label.add_item(book)
+    genre.add_item(book)
     puts 'Book added'
-  end
-
-  def self.validate_label(labels, book)
-    print 'Enter label title:'
-    title = gets.chomp.to_s
-    print 'Enter label color:'
-    color = gets.chomp.to_s
-    if labels.select { |book_label| book_label.title == title && book_label.color == color }.empty?
-      new_label = Label.new(title, color)
-      new_label.add_item(book)
-      labels << new_label
-    else
-      labels.select { |book_label| book_label.title == title && book_label.color == color }[0].add_item(book)
-    end
-    LabelPersistor.write_to_file(labels)
+    book
   end
 end
