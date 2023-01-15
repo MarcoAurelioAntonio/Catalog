@@ -1,4 +1,6 @@
 require_relative './item'
+require_relative './label'
+require_relative './author'
 require_relative './genre'
 
 class MusicAlbum < Item
@@ -13,23 +15,25 @@ class MusicAlbum < Item
     (Date.today - @publish_date) > 3652 && @on_spotify
   end
 
-  def self.add_music_album(music_albums, genres)
+  def self.add_music_album
     puts 'ADD A NEW MUSIC ALBUM'
     print 'Enter genre: '
-    genre = gets.chomp.to_s
-    print 'Enter author:'
-    author = gets.chomp.to_s
-    print 'Enter label:'
-    label = gets.chomp.to_s
+    genre = Genre.new(gets.chomp.to_s)
+    puts 'Enter author'
+    author = Author.input_author
+    puts 'Enter label'
+    label = Label.input_label
     print 'Enter publish date (YYYY-MM-DD):'
     date = gets.chomp.to_s
     print 'Is on spotify? (y/n):'
     on_spotify = gets.chomp
     on_spotify = on_spotify == 'y'
     music_album = MusicAlbum.new(on_spotify, date, genre, author, label)
-    Genre.validate_genre(genre, genres, music_album)
     music_album.move_to_archive
-    music_albums << music_album
+    author.add_item(music_album)
+    label.add_item(music_album)
+    genre.add_item(music_album)
     puts 'Music album added'
+    music_album
   end
 end

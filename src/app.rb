@@ -15,9 +15,9 @@ class App
     @genres = GenrePersistor.read_from_file
     @labels = LabelPersistor.read_from_file
     @authors = AuthorPersistor.read_from_file
-    @music_albums = MusicAlbumPersistor.read_from_file(@genres)
+    @music_albums = MusicAlbumPersistor.read_from_file(@labels, @authors, @genres)
     @books = BookPersistor.read_from_file(@labels, @authors, @genres)
-    @games = GamePersistor.read_from_file(@authors)
+    @games = GamePersistor.read_from_file(@labels, @authors, @genres)
     @menu_options = {
       '1' => method(:list_all_books),
       '2' => method(:list_all_music_albums),
@@ -97,7 +97,11 @@ class App
   end
 
   def add_music_album
-    MusicAlbum.add_music_album(@music_albums, @genres)
+    music_album = MusicAlbum.add_music_album
+    @music_albums << music_album
+    @labels << music_album.label
+    @genres << music_album.genre
+    @authors << music_album.author
   end
 
   def add_game
