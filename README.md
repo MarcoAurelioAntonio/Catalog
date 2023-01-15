@@ -67,7 +67,6 @@
 - **[Add a Music Album]**
 - **[List all added items]**
 - **[Keep track of books, music albums, movies, and games and other information]**
-- **[Add label and author validations as future improvements]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,6 +129,11 @@ ruby `main.rb`
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
+
+- **[Add label and author validations as future improvements]**
+- **[Persist one-to-many relationships]**
+- **[Improve listing display]**
+- **[Improve UI using diferent colors and bold]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
