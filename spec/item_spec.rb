@@ -27,4 +27,8 @@ describe Item do
   it 'shuld have a method to move to archive' do
     expect(item).to respond_to(:move_to_archive)
   end
+
+  it 'shuld have a method to move to archive' do
+    expect(item).to respond_to(:can_be_archived?)
+  end
 end
