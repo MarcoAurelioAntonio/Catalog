@@ -3,7 +3,7 @@ require './src/classes/game'
 require_relative './author_persistor'
 
 module GamePersistor
-  SOURCE = './data/DB/game.json'.freeze
+  SOURCE = './data/DB/games.json'.freeze
 
   def self.read_from_file(authors)
     return [] unless File.exist?(SOURCE)
@@ -29,8 +29,8 @@ module GamePersistor
     {
       'id' => game.id,
       'author_id' => game.author.id,
-      'genre' => game.genre,
-      'label' => game.label,
+      'genre_id' => game.genre.id,
+      'label_id' => game.label.id,
       'publish_date' => game.publish_date,
       'multiplayer' => game.multiplayer,
       'archived' => game.archived,

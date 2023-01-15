@@ -1,5 +1,8 @@
 require_relative './item'
+require_relative './label'
 require_relative './author'
+require_relative './genre'
+
 require 'json'
 
 class Game < Item
@@ -15,12 +18,12 @@ class Game < Item
     return true if date > 3_652 && @last_played_at < (365 * 2)
   end
 
-  def self.add_game(games, authors)
+  def self.add_game
     puts 'Add a New Game'
-    puts 'Enter Genre: '
-    genre = gets.chomp.to_s
-    puts 'Enter Label: '
-    label = gets.chomp.to_s
+    print 'Enter Genre: '
+    genre = Genre.new(gets.chomp.to_s)
+    puts 'Enter Label '
+    label = Label.input_label
     puts 'Does it include multiplayer?.(true/false)'
     multiplayer = gets.chomp.to_s
     puts 'Enter Game Author: '
@@ -31,9 +34,10 @@ class Game < Item
     last_played_at = gets.chomp.to_s
     game = Game.new(last_played_at, multiplayer, publish_date, genre, author, label)
     game.move_to_archive
+    genre.add_item(game)
+    label.add_item(game)
     author.add_item(game)
-    authors << author
-    games << game
     puts 'Game Successfully Added'
+    game
   end
 end

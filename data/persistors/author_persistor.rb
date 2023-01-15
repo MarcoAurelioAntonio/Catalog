@@ -22,7 +22,7 @@ module AuthorPersistor
       'id' => author_item.id,
       'first_name' => author_item.first_name,
       'last_name' => author_item.last_name,
-      'items' => author_item.items.map { |item| ItemPersistor.ruby_to_json(item) }
+      'items' => []
     }
   end
 

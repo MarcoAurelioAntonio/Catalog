@@ -29,9 +29,6 @@ class App
       '8' => method(:add_music_album),
       '9' => method(:add_game)
     }
-    ItemPersistor.read_from_file(@genres, @music_albums, @books, @games)
-    ItemPersistor.read_from_file(@authors, @music_albums, @books, @games)
-    # Add ItemPersistor.read_from_file for @labels and @authors
   end
 
   def run
@@ -91,6 +88,7 @@ class App
   end
 
   def add_book
+    puts 'Add a new book'
     book = Book.add_book
     @books << book
     @labels << book.label
@@ -103,12 +101,11 @@ class App
   end
 
   def add_game
-    # game = Game.add_game
-    # @games << game
-    # @authors << game.author
-    # @genres << game.genre
-    # @labels << game.label
-    Game.add_game(@games, @authors)
+    game = Game.add_game
+    @games << game
+    @authors << game.author
+    @genres << game.genre
+    @labels << game.label
   end
 
   def save_data

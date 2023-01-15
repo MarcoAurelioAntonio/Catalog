@@ -1,4 +1,5 @@
 require 'json'
+require './src/classes/label'
 
 module LabelPersistor
   SOURCE = './data/DB/labels.json'.freeze
@@ -19,11 +20,14 @@ module LabelPersistor
     {
       'id' => label.id,
       'title' => label.title,
-      'color' => label.color
+      'color' => label.color,
+      'items' => []
     }
   end
 
   def self.json_to_label(json)
-    Label.new(json['title'], json['color'])
+    new_label = Label.new(json['title'], json['color'])
+    new_label.id = json['id']
+    new_label
   end
 end

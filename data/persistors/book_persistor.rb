@@ -24,12 +24,14 @@ module BookPersistor
       'publish_date' => book.publish_date,
       'genre_id' => book.genre.id,
       'author_id' => book.author.id,
-      'label_id' => book.label.id
+      'label_id' => book.label.id,
+      'archived' => book.archived
     }
   end
 
   def self.json_to_book(json, labels, authors, genres)
-    Book.new(json['publisher'], json['cover_state'], json['publish_date'], json['genre'], json['author'], 'label')
+    new_book = Book.new(json['publisher'], json['cover_state'], json['publish_date'], json['genre'], json['author'],
+                        'label')
     new_book.archived = json['archived']
     new_book.label = labels.find { |label| label.id == json['label_id'] }
     new_book.genre = genres.find { |genre| genre.id == json['genre_id'] }
