@@ -32,8 +32,8 @@ module MusicAlbumPersistor
     {
       id: music_album_item.id,
       genre_id: music_album_item.genre.id,
-      author: music_album_item.author,
-      label: music_album_item.label,
+      author_id: music_album_item.author.id,
+      label_id: music_album_item.label.id,
       publish_date: music_album_item.publish_date,
       archived: music_album_item.archived,
       on_spotify: music_album_item.on_spotify

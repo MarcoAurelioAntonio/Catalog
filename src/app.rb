@@ -54,19 +54,19 @@ class App
 
   def list_all_books
     @books.each_with_index do |book, index|
-      puts "(#{index + 1}) - #{book.genre} - #{book.author} - #{book.label}"
+      puts "(#{index + 1}) - #{book.genre.genre} - #{book.author.first_name} - #{book.label.title}"
     end
   end
 
   def list_all_music_albums
     @music_albums.each_with_index do |music_album, index|
-      puts "(#{index + 1}) - #{music_album.genre.genre} - #{music_album.author} - #{music_album.label}"
+      puts "(#{index + 1}) - #{music_album.genre.genre} - #{music_album.author.first_name} - #{music_album.label.title}"
     end
   end
 
   def list_all_games
     @games.each_with_index do |game, index|
-      puts "[#{index}]  #{game.label}  #{game.genre}  #{game.publish_date}  #{game.multiplayer}"
+      puts "[#{index}]  #{game.label.title}  #{game.genre.genre}  #{game.publish_date}  #{game.multiplayer}"
     end
   end
 
@@ -74,17 +74,18 @@ class App
     @genres.each_with_index do |genre, index|
       puts "(#{index + 1}) - #{genre.genre}"
     end
-    puts @genres.inspect
   end
 
   def list_all_labels
     @labels.each_with_index do |label, index|
-      puts "(#{index + 1}) - #{label}"
+      puts "(#{index + 1}) - #{label.title} - #{label.color}"
     end
   end
 
   def list_all_authors
-    puts 'list all authors'
+    @authors.each_with_index do |author, index|
+      puts "(#{index + 1}) - #{author.first_name} - #{author.last_name}"
+    end
   end
 
   def add_book
