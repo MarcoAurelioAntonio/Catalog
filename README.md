@@ -162,7 +162,13 @@ If you like this project, please leave star
 
 ## ❓ FAQ <a name="faq"></a>
 
-
+- **[How can I get in touch with you?]**
+  - You can reach us through our GitHub profiles.
+- **[How can I contribute to this project?]**
+  - You can contribute to this project by opening an issue or a pull request.
+- **[Could I delete .json files?]**
+  - Yes, you can delete .json files, but you will lose all your data.
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
