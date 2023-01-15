@@ -18,6 +18,9 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  [🚀 Project Documentation ](#-project-documentation-)
+    - [Video ](#video)
+    - [Diagram ](#diagram)
   - [💻 Getting Started ](#-getting-started-)
   - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -41,9 +44,16 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-<summary>Ruby</summary>
+  <summary>Client</summary>
   <ul>
-   <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
 
@@ -51,7 +61,22 @@
 
 ### Key Features <a name="key-features"></a>
 
+- **[Create and manage data about my things]**
+- **[Add a Book]**
+- **[Add a Game]**  
+- **[Add a Music Album]**
+- **[List all added items]**
+- **[Keep track of books, music albums, movies, and games and other information]**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Project Documentation <a name="live-demo"></a>
+
+Please visit our zoom video presentation. Click the [Link](https://loom.com/share/cacf0349f8cb4db49d90f9b9323de431) button.
+
+
+### Diagram
+![Diagram](https://user-images.githubusercontent.com/35680940/211393165-1c878ea1-12e4-4f7f-a749-f3a3c7823c7e.png)
 
 <!-- GETTING STARTED -->
 
@@ -104,6 +129,11 @@ ruby `main.rb`
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
+
+- **[Add label and author validations as future improvements]**
+- **[Persist one-to-many relationships]**
+- **[Improve listing display]**
+- **[Improve UI using diferent colors and bold]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,0 +1,7 @@
+require './src/classes/book'
+require './src/classes/label'
+require './src/classes/author'
+require './src/classes/game'
+require './src/classes/genre'
+require './src/classes/item'
+require './src/classes/music_album'
