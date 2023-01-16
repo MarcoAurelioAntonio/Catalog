@@ -1,0 +1,22 @@
+[
+  {
+    "id": 737,
+    "author_id": 259,
+    "genre_id": 390,
+    "label_id": 358,
+    "publish_date": "2022-02-20",
+    "multiplayer": "true",
+    "archived": false,
+    "last_played_at": "20/05/2022"
+  },
+  {
+    "id": 527,
+    "author_id": 918,
+    "genre_id": 294,
+    "label_id": 772,
+    "publish_date": "2020-05-08",
+    "multiplayer": "true",
+    "archived": false,
+    "last_played_at": "2022/05/07"
+  }
+]
